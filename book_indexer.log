@@ -1,0 +1,41 @@
+2025-03-26 07:05:04,050 - book_indexer - INFO - Logger initialized
+2025-03-26 07:05:04,056 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:07:08,171 - book_indexer - INFO - Logger initialized
+2025-03-26 07:07:08,178 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:07:45,868 - book_indexer - INFO - Logger initialized
+2025-03-26 07:07:45,872 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:11:15,701 - book_indexer - INFO - Logger initialized
+2025-03-26 07:11:15,707 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:12:07,046 - book_indexer - INFO - Logger initialized
+2025-03-26 07:12:07,050 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:12:07,051 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 07:12:07,051 - book_indexer - INFO - Running full book processing
+2025-03-26 07:12:07,051 - book_indexer - INFO - Starting book processing
+2025-03-26 07:12:07,051 - book_indexer - ERROR - Error during processing: 'BookProcessor' object has no attribute '_collect_book_files'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/main.py", line 39, in main
+    processor.process_books()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 27, in process_books
+    book_files = self._collect_book_files()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BookProcessor' object has no attribute '_collect_book_files'
+2025-03-26 07:13:15,269 - book_indexer - INFO - Logger initialized
+2025-03-26 07:13:15,273 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:13:15,273 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 07:13:15,273 - book_indexer - INFO - Running full book processing
+2025-03-26 07:13:15,273 - book_indexer - INFO - Starting book processing
+2025-03-26 07:13:15,273 - book_indexer - INFO - Scanning directory: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals
+2025-03-26 07:13:15,274 - book_indexer - INFO - Moved Thinking, Fast and Slow - Daniel Kahneman.epub to Originals directory
+2025-03-26 07:13:15,274 - book_indexer - INFO - Moved 48 Laws of Power, The - Robert Greene; Joost Elffers.epub to Originals directory
+2025-03-26 07:13:15,274 - book_indexer - INFO - Moved J. K. Rowling - Harry Potter  The Prequel.pdf to Originals directory
+2025-03-26 07:13:15,274 - book_indexer - INFO - Moved Gypsy Jazz Guitar Chords.pdf to Originals directory
+2025-03-26 07:13:15,274 - book_indexer - INFO - Moved Mastering Tai Chi (The Great Courses).pdf to Originals directory
+2025-03-26 07:13:15,798 - book_indexer - INFO - Found 5 book files to process
+2025-03-26 07:13:15,798 - book_indexer - INFO - Found 5 book files
+2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'BookProcessor' object has no attribute '_process_single_book'
+2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'BookProcessor' object has no attribute '_process_single_book'
+2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/J. K. Rowling - Harry Potter  The Prequel.pdf: 'BookProcessor' object has no attribute '_process_single_book'
+2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'BookProcessor' object has no attribute '_process_single_book'
+2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Mastering Tai Chi (The Great Courses).pdf: 'BookProcessor' object has no attribute '_process_single_book'
+2025-03-26 07:13:15,798 - book_indexer - INFO - Processing completed
