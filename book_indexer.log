@@ -539,3 +539,18 @@ AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_
 2025-03-26 14:10:27,916 - book_indexer - WARNING - No book entries to index
 2025-03-26 14:10:27,916 - book_indexer - INFO - Processing completed
 2025-03-26 14:10:27,916 - book_indexer - INFO - Processing completed
+2025-03-26 14:15:05,199 - book_indexer - INFO - Logger initialized
+2025-03-26 14:15:05,202 - book_indexer - INFO - Starting book indexer
+2025-03-26 14:15:05,202 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-26 14:15:05,202 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-26 14:15:05,202 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-26 14:15:05,203 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-26 14:15:05,203 - book_indexer - INFO - Running full book processing
+2025-03-26 14:15:05,204 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-26 14:15:05,204 - book_indexer - INFO - Processing: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:15:05,604 - book_indexer - INFO - Processing: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:15:05,807 - book_indexer - INFO - Processing: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:15:06,108 - book_indexer - INFO - Processing: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:15:06,645 - book_indexer - INFO - Processing: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:15:06,914 - book_indexer - INFO - Processing completed
