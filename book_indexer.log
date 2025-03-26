@@ -39,3 +39,503 @@ AttributeError: 'BookProcessor' object has no attribute '_collect_book_files'
 2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'BookProcessor' object has no attribute '_process_single_book'
 2025-03-26 07:13:15,798 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Mastering Tai Chi (The Great Courses).pdf: 'BookProcessor' object has no attribute '_process_single_book'
 2025-03-26 07:13:15,798 - book_indexer - INFO - Processing completed
+2025-03-26 07:28:39,797 - book_indexer - INFO - Logger initialized
+2025-03-26 07:28:39,804 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:28:39,804 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 07:28:39,804 - book_indexer - INFO - Running full book processing
+2025-03-26 07:28:39,804 - book_indexer - INFO - Starting book processing
+2025-03-26 07:28:39,804 - book_indexer - INFO - Scanning directory: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals
+2025-03-26 07:28:40,190 - book_indexer - INFO - Found 5 book files to process
+2025-03-26 07:28:40,190 - book_indexer - INFO - Found 5 book files
+2025-03-26 07:28:42,354 - book_indexer - INFO - Successfully processed: Thinking, Fast and Slow
+2025-03-26 07:28:42,582 - book_indexer - INFO - Successfully processed: The 48 Laws of Power
+2025-03-26 07:28:43,093 - book_indexer - INFO - Successfully processed: Harry Potter- The Prequel
+2025-03-26 07:28:43,407 - book_indexer - INFO - Successfully processed: out.pdf
+2025-03-26 07:28:45,003 - book_indexer - INFO - Successfully processed: Mastering Tai Chi
+2025-03-26 07:28:45,003 - book_indexer - INFO - Processing completed
+2025-03-26 07:52:34,179 - book_indexer - INFO - Logger initialized
+2025-03-26 07:52:34,195 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:53:06,449 - book_indexer - INFO - Logger initialized
+2025-03-26 07:53:06,454 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:53:06,454 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 07:53:06,455 - book_indexer - INFO - Running full book processing
+2025-03-26 07:53:06,455 - book_indexer - INFO - Starting book processing
+2025-03-26 07:53:06,455 - book_indexer - INFO - Processed: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 07:53:06,455 - book_indexer - INFO - Processed: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 07:53:06,456 - book_indexer - INFO - Processed: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 07:53:06,456 - book_indexer - INFO - Processed: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 07:53:06,456 - book_indexer - INFO - Processed: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 07:53:06,456 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Bucket/Daniel A Strachman - Essential Stock Picking Strategies
+2025-03-26 07:53:06,456 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Bucket/Stephen King - Collections - 1999 - Hearts In Atlantis
+2025-03-26 07:53:06,456 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 07:53:07,518 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: data must be str, not NoneType
+2025-03-26 07:53:07,518 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 07:53:07,727 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: data must be str, not NoneType
+2025-03-26 07:53:07,728 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 07:53:08,013 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: data must be str, not NoneType
+2025-03-26 07:53:08,013 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 07:53:08,302 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Gypsy Jazz Guitar Chords.pdf: data must be str, not NoneType
+2025-03-26 07:53:08,302 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 07:53:08,935 - book_indexer - ERROR - Error processing /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Books/Originals/Mastering Tai Chi The Great Courses.pdf: data must be str, not NoneType
+2025-03-26 07:53:08,936 - book_indexer - INFO - Processing completed
+2025-03-26 07:53:08,936 - book_indexer - INFO - Processing completed
+2025-03-26 07:55:38,340 - book_indexer - INFO - Logger initialized
+2025-03-26 07:55:38,346 - book_indexer - INFO - Starting book indexer
+2025-03-26 07:55:38,346 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 07:55:38,346 - book_indexer - INFO - Running full book processing
+2025-03-26 07:55:38,346 - book_indexer - INFO - Starting book processing
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processed: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processed: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processed: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processed: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 07:55:38,347 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Bucket/Daniel A Strachman - Essential Stock Picking Strategies
+2025-03-26 07:55:38,347 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Library/CloudStorage/Dropbox/Areas/Helen/Helena/TESTINGNOW/90.00_meta_resources/Bucket/Stephen King - Collections - 1999 - Hearts In Atlantis
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processed: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 07:55:38,347 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 07:55:38,766 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-26 07:55:38,766 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 07:55:38,966 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-26 07:55:38,966 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 07:55:39,285 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-26 07:55:39,285 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 07:55:39,826 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-26 07:55:39,827 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 07:55:40,090 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-26 07:55:40,090 - book_indexer - INFO - Processing completed
+2025-03-26 07:55:40,090 - book_indexer - INFO - Processing completed
+2025-03-26 08:00:32,601 - book_indexer - INFO - Logger initialized
+2025-03-26 08:00:32,607 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:00:32,607 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:00:32,608 - book_indexer - INFO - Running full book processing
+2025-03-26 08:00:32,608 - book_indexer - INFO - Starting book processing
+2025-03-26 08:00:32,608 - book_indexer - INFO - No new files to process
+2025-03-26 08:00:32,608 - book_indexer - INFO - Processing completed
+2025-03-26 08:01:15,887 - book_indexer - INFO - Logger initialized
+2025-03-26 08:01:15,892 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:01:15,892 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:01:15,893 - book_indexer - INFO - Running full book processing
+2025-03-26 08:01:15,893 - book_indexer - INFO - Starting book processing
+2025-03-26 08:01:15,893 - book_indexer - INFO - Processed: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:01:15,893 - book_indexer - INFO - Processed: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:01:15,893 - book_indexer - INFO - Processed: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:01:15,893 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:01:15,893 - book_indexer - INFO - Processed: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:01:15,893 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:01:15,894 - book_indexer - INFO - Processed: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:01:15,894 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:01:16,252 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-26 08:01:16,252 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:01:16,448 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-26 08:01:16,448 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:01:16,754 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-26 08:01:16,754 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:01:17,294 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-26 08:01:17,294 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:01:17,555 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-26 08:01:17,555 - book_indexer - INFO - Processing completed
+2025-03-26 08:01:17,555 - book_indexer - INFO - Processing completed
+2025-03-26 08:41:36,700 - book_indexer - INFO - Logger initialized
+2025-03-26 08:41:36,704 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:41:36,704 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:41:36,704 - book_indexer - INFO - Running full book processing
+2025-03-26 08:41:36,704 - book_indexer - INFO - Starting book processing
+2025-03-26 08:41:36,704 - book_indexer - INFO - Processed: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:41:36,705 - book_indexer - INFO - Processed: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:41:36,705 - book_indexer - INFO - Processed: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:41:36,705 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:41:36,705 - book_indexer - INFO - Processed: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:41:36,705 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:41:36,705 - book_indexer - INFO - Processed: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:41:36,705 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:41:37,116 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:41:37,116 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:41:37,322 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:41:37,322 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:41:37,634 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:41:37,634 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:41:38,193 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:41:38,193 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:41:38,453 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:41:38,453 - book_indexer - INFO - Processing completed
+2025-03-26 08:41:38,453 - book_indexer - INFO - Processing completed
+2025-03-26 08:47:09,009 - book_indexer - INFO - Logger initialized
+2025-03-26 08:47:09,014 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:47:09,014 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:47:09,014 - book_indexer - INFO - Running full book processing
+2025-03-26 08:47:09,014 - book_indexer - INFO - Starting book processing
+2025-03-26 08:47:09,014 - book_indexer - INFO - Found 5 existing files in Originals
+2025-03-26 08:47:09,015 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:47:09,015 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:47:09,015 - book_indexer - INFO - Found 0 files to process
+2025-03-26 08:47:09,015 - book_indexer - INFO - No files to process
+2025-03-26 08:47:09,015 - book_indexer - INFO - Processing completed
+2025-03-26 08:47:25,005 - book_indexer - INFO - Logger initialized
+2025-03-26 08:47:25,009 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:47:25,009 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:47:25,009 - book_indexer - INFO - Running full book processing
+2025-03-26 08:47:25,009 - book_indexer - INFO - Starting book processing
+2025-03-26 08:47:25,009 - book_indexer - INFO - Found 0 existing files in Originals
+2025-03-26 08:47:25,009 - book_indexer - INFO - Processed new file: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:47:25,009 - book_indexer - INFO - Processed new file: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:47:25,009 - book_indexer - INFO - Processed new file: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:47:25,009 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:47:25,009 - book_indexer - INFO - Processed new file: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:47:25,010 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:47:25,010 - book_indexer - INFO - Processed new file: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:47:25,010 - book_indexer - INFO - Found 5 files to process
+2025-03-26 08:47:25,010 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:47:25,010 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:47:25,422 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:47:25,427 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:47:25,427 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:47:25,627 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:47:25,628 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:47:25,628 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:47:25,922 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:47:25,922 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:47:25,922 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:47:26,447 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:47:26,447 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:47:26,447 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:47:26,713 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:47:26,714 - book_indexer - WARNING - No book entries to index
+2025-03-26 08:47:26,714 - book_indexer - INFO - Processing completed
+2025-03-26 08:47:26,714 - book_indexer - INFO - Processing completed
+2025-03-26 08:57:36,396 - book_indexer - INFO - Logger initialized
+2025-03-26 08:57:36,399 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:57:36,400 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:57:36,400 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-26 08:57:36,400 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-26 08:57:36,400 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-26 08:57:36,457 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-26 08:57:36,457 - book_indexer - INFO - Running full book processing
+2025-03-26 08:57:36,457 - book_indexer - INFO - Starting book processing
+2025-03-26 08:57:36,457 - book_indexer - INFO - Found 5 existing files in Originals
+2025-03-26 08:57:36,457 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:57:36,457 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:57:36,457 - book_indexer - INFO - Found 0 files to process
+2025-03-26 08:57:36,457 - book_indexer - INFO - No files to process
+2025-03-26 08:57:36,457 - book_indexer - INFO - Processing completed
+2025-03-26 08:58:00,124 - book_indexer - INFO - Logger initialized
+2025-03-26 08:58:00,128 - book_indexer - INFO - Starting book indexer
+2025-03-26 08:58:00,128 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 08:58:00,128 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-26 08:58:00,128 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-26 08:58:00,128 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-26 08:58:00,128 - book_indexer - DEBUG - Files in ORIGINALS_DIR: []
+2025-03-26 08:58:00,128 - book_indexer - INFO - Running full book processing
+2025-03-26 08:58:00,128 - book_indexer - INFO - Starting book processing
+2025-03-26 08:58:00,128 - book_indexer - INFO - Found 0 existing files in Originals
+2025-03-26 08:58:00,128 - book_indexer - INFO - Processed new file: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:58:00,128 - book_indexer - INFO - Processed new file: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:58:00,128 - book_indexer - INFO - Processed new file: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:58:00,128 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 08:58:00,129 - book_indexer - INFO - Processed new file: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:58:00,129 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 08:58:00,129 - book_indexer - INFO - Processed new file: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:58:00,129 - book_indexer - INFO - Found 5 files to process
+2025-03-26 08:58:00,129 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:58:00,129 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 08:58:00,586 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:58:00,590 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:58:00,590 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 08:58:00,796 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:58:00,797 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:58:00,797 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 08:58:01,114 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:58:01,114 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:58:01,114 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 08:58:01,686 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:58:01,686 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:58:01,686 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 08:58:01,955 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 37, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 69, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 53, in create_landing_page
+    content = self._preserve_existing_content(content, existing_content)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_preserve_existing_content'
+2025-03-26 08:58:01,955 - book_indexer - WARNING - No book entries to index
+2025-03-26 08:58:01,955 - book_indexer - INFO - Processing completed
+2025-03-26 08:58:01,956 - book_indexer - INFO - Processing completed
+2025-03-26 14:03:25,392 - book_indexer - INFO - Logger initialized
+2025-03-26 14:03:25,398 - book_indexer - INFO - Starting book indexer
+2025-03-26 14:03:25,398 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 14:03:25,398 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-26 14:03:25,398 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-26 14:03:25,398 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-26 14:03:25,398 - book_indexer - DEBUG - Files in ORIGINALS_DIR: []
+2025-03-26 14:03:25,398 - book_indexer - INFO - Running full book processing
+2025-03-26 14:03:25,398 - book_indexer - INFO - Starting book processing
+2025-03-26 14:03:25,398 - book_indexer - INFO - Found 0 existing files in Originals
+2025-03-26 14:03:25,398 - book_indexer - INFO - Processed new file: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:03:25,398 - book_indexer - INFO - Processed new file: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:03:25,398 - book_indexer - INFO - Processed new file: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:03:25,399 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 14:03:25,399 - book_indexer - INFO - Processed new file: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:03:25,399 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 14:03:25,399 - book_indexer - INFO - Processed new file: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:03:25,399 - book_indexer - INFO - Found 5 files to process
+2025-03-26 14:03:25,399 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:03:25,399 - book_indexer - INFO - Processing book: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:03:26,117 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 40, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 78, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:03:26,121 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:03:26,121 - book_indexer - INFO - Processing book: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:03:26,316 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 40, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 78, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:03:26,317 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:03:26,317 - book_indexer - INFO - Processing book: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:03:26,750 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 40, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 78, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:03:26,751 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:03:26,751 - book_indexer - INFO - Processing book: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:03:27,451 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 40, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 78, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:03:27,452 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:03:27,452 - book_indexer - INFO - Processing book: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:03:27,712 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 40, in process_books
+    entry = self._process_single_book(file_path)
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 78, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:03:27,712 - book_indexer - INFO - 
+=== Processing Summary ===
+2025-03-26 14:03:27,712 - book_indexer - INFO - Total books processed: 5
+2025-03-26 14:03:27,712 - book_indexer - INFO - Markdown matches found: 0
+2025-03-26 14:03:27,712 - book_indexer - INFO - Match rate: 0.0%
+2025-03-26 14:03:27,712 - book_indexer - WARNING - No book entries to index
+2025-03-26 14:03:27,712 - book_indexer - INFO - Processing completed
+2025-03-26 14:03:27,712 - book_indexer - INFO - Processing completed
+2025-03-26 14:10:25,698 - book_indexer - INFO - Logger initialized
+2025-03-26 14:10:25,703 - book_indexer - INFO - Starting book indexer
+2025-03-26 14:10:25,703 - book_indexer - INFO - BookProcessor initialized
+2025-03-26 14:10:25,703 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-26 14:10:25,704 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-26 14:10:25,704 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-26 14:10:25,704 - book_indexer - DEBUG - Files in ORIGINALS_DIR: []
+2025-03-26 14:10:25,704 - book_indexer - INFO - Running full book processing
+2025-03-26 14:10:25,704 - book_indexer - INFO - Starting book processing
+2025-03-26 14:10:25,704 - book_indexer - INFO - Found 0 existing files in Originals
+2025-03-26 14:10:25,704 - book_indexer - INFO - Processed new file: Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:10:25,704 - book_indexer - INFO - Processed new file: 48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:10:25,704 - book_indexer - INFO - Processed new file: Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:10:25,704 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Books
+2025-03-26 14:10:25,704 - book_indexer - INFO - Processed new file: Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:10:25,704 - book_indexer - WARNING - Unsupported file type: /Users/austinavent/Documents/VAULTTEST/TESTING/Bucket/Bucket
+2025-03-26 14:10:25,705 - book_indexer - INFO - Processed new file: J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:10:25,705 - book_indexer - INFO - Found 5 files to process
+2025-03-26 14:10:25,705 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:10:25,705 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub
+2025-03-26 14:10:26,185 - book_indexer - DEBUG - Extracted metadata: {'path': 'Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub', 'title': 'Thinking, Fast and Slow', 'publisher': 'Farrar, Straus and Giroux', 'published': '2011-10-24T14-00-00+00-00', 'language': 'eng', 'format': 'EPUB', 'author': 'Thinking, Fast and Slow', 'last_opened': '2025-03-26', 'status': 'new', 'reading_progress': 0}
+2025-03-26 14:10:26,185 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 74, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:10:26,190 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:10:26,190 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub
+2025-03-26 14:10:26,476 - book_indexer - DEBUG - Extracted metadata: {'path': 'Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub', 'title': 'The 48 Laws of Power', 'title_sort': '48 Laws of Power, The', 'publisher': 'Penguin Group', 'published': '2000-09-07T06-04-58+00-00', 'tags': 'Self-Help', 'identifiers': 'isbn-9780140280197, mobi-asin-ae51f044-5d76-419f-9d7f-e5a00d717bc6', 'language': 'eng', 'description': 'p class=-description-SUMMARY-br-THE BESTSELLING BOOK FOR THOSE WHO WANT POWER, WATCH POWER, OR WANT TO ARM THEMSELVES AGAINST POWER . . .A moral, cunning, ruthless, and instructive, this piercing work distills three thousand years of the history of power into forty-eight well-explicated laws. As attention-grabbing in its design as it is in its content, this bold volume outlines the laws of power in their unvarnished essence, synthesizing the philosophies of Machiavelli, Sun-tzu, Carl von Clausewitz, and other great thinkers. Some laws require prudence -Law 1- Never Outshine the Master-, some stealth -Law 3- Conceal Your Intentions-, and some the total absence of mercy -Law 15- Crush Your Enemy Totally- but like it or not, all have applications in real-life situations. Illustrated through the tactics of Queen Elizabeth I, Henry Kissinger, P. T. Barnum, and other famous figures who have wielded - or been victimized by - power, these laws will fascinate any reader interested in gaining, observing, or defending against ultimate control.-p', 'format': 'EPUB', 'author': '48 Laws of Power, The', 'last_opened': '2025-03-26', 'status': 'new', 'reading_progress': 0}
+2025-03-26 14:10:26,476 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 74, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:10:26,476 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:10:26,476 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf
+2025-03-26 14:10:26,862 - book_indexer - DEBUG - Extracted metadata: {'path': 'Books/Originals/Gypsy Jazz Guitar Chords.pdf', 'title': 'out.pdf', 'format': 'PDF', 'author': 'Unknown Author', 'last_opened': '2025-03-26', 'status': 'new', 'reading_progress': 0}
+2025-03-26 14:10:26,862 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 74, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:10:26,862 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:10:26,863 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf
+2025-03-26 14:10:27,543 - book_indexer - DEBUG - Extracted metadata: {'path': 'Books/Originals/Mastering Tai Chi The Great Courses.pdf', 'title': 'Mastering Tai Chi', 'published': '2016-09-12T22-04-13+00-00', 'format': 'PDF', 'author': 'Unknown Author', 'last_opened': '2025-03-26', 'status': 'new', 'reading_progress': 0}
+2025-03-26 14:10:27,543 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 74, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:10:27,543 - book_indexer - INFO - 
+Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:10:27,543 - book_indexer - INFO - Processing book: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf
+2025-03-26 14:10:27,915 - book_indexer - DEBUG - Extracted metadata: {'path': 'Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf', 'title': 'Harry Potter- The Prequel', 'format': 'PDF', 'author': 'J. K. Rowling', 'last_opened': '2025-03-26', 'status': 'new', 'reading_progress': 0}
+2025-03-26 14:10:27,915 - book_indexer - ERROR - Error processing /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+Traceback (most recent call last):
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/book_processor.py", line 74, in _process_single_book
+    title, metadata = self.markdown_processor.create_landing_page(metadata)
+                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/austinavent/Documents/local_projects/coding/readerProject/src/processor/markdown.py", line 48, in create_landing_page
+    annotation_doc = self._create_annotation_document(metadata, safe_title)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'MarkdownProcessor' object has no attribute '_create_annotation_document'
+2025-03-26 14:10:27,916 - book_indexer - INFO - 
+=== Processing Summary ===
+2025-03-26 14:10:27,916 - book_indexer - INFO - Total books processed: 5
+2025-03-26 14:10:27,916 - book_indexer - INFO - Markdown matches found: 0
+2025-03-26 14:10:27,916 - book_indexer - INFO - Match rate: 0.0%
+2025-03-26 14:10:27,916 - book_indexer - WARNING - No book entries to index
+2025-03-26 14:10:27,916 - book_indexer - INFO - Processing completed
+2025-03-26 14:10:27,916 - book_indexer - INFO - Processing completed

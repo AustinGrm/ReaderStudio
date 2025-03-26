@@ -1,6 +1,7 @@
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 from ..metadata.calibre import CalibreMetadata
+from .file_processor import FileProcessor
 from .markdown import MarkdownProcessor
 from .index import IndexProcessor
 from ..utils.logger import setup_logger
@@ -8,80 +9,73 @@ from ..utils.logger import setup_logger
 logger = setup_logger()
 
 class BookProcessor:
-    def __init__(self, config, debug=False):
+    def __init__(self, config):
         self.config = config
-        self.debug = debug
-        self.processed_count = 0
+        self.file_processor = FileProcessor(config)
         self.markdown_processor = MarkdownProcessor(config)
         self.index_processor = IndexProcessor(config)
         self.calibre = CalibreMetadata(config)
         logger.info("BookProcessor initialized")
-        
+
     def process_books(self):
         """Main processing function."""
         logger.info("Starting book processing")
         
-        # Add immediate debug output
-        logger.debug(f"Looking for books in: {self.config.ORIGINALS_DIR}")
+        # Process bucket directory
+        processed_files = self.file_processor.process_bucket()
+        logger.info(f"Found {len(processed_files)} files to process")
         
-        book_files = self._collect_book_files()
-        logger.info(f"Found {len(book_files)} book files")
-        
-        if not book_files:
-            logger.warning("No books found to process")
+        if not processed_files:
+            logger.info("No files to process")
             return
         
-        for file_path in book_files:
-            if self.debug and self.processed_count >= self.config.MAX_BOOKS:
-                logger.debug("Reached maximum book limit for debug mode")
-                break
-                
+        # Process each file
+        book_entries = []
+        markdown_matches = 0
+        total_books = len(processed_files)
+        
+        for file_path in processed_files:
             try:
-                self._process_single_book(file_path)
-                self.processed_count += 1
-                
-                if self.debug:
-                    logger.debug(f"Processed {self.processed_count}/{self.config.MAX_BOOKS}")
-                    # Add a pause to inspect results
-                    input("Press Enter to continue...")
-                    
+                logger.info(f"\nProcessing book: {file_path}")
+                entry = self._process_single_book(file_path)
+                if entry:
+                    book_entries.append(entry)
+                    title, metadata = entry
+                    if 'markdown_path' in metadata:
+                        markdown_matches += 1
             except Exception as e:
-                logger.error(f"Error processing {file_path}: {e}") 
+                logger.error(f"Error processing {file_path}: {e}", exc_info=True)
+        
+        # Report statistics
+        logger.info("\n=== Processing Summary ===")
+        logger.info(f"Total books processed: {total_books}")
+        logger.info(f"Markdown matches found: {markdown_matches}")
+        logger.info(f"Match rate: {(markdown_matches/total_books)*100:.1f}%")
+        
+        # Create/update index
+        if book_entries:
+            logger.info(f"\nCreating index with {len(book_entries)} entries")
+            self.index_processor.create_index(book_entries)
+        else:
+            logger.warning("No book entries to index")
+        
+        logger.info("Processing completed")
 
-    def _collect_book_files(self) -> List[Path]:
-        """Collect all book files to process."""
-        logger.info(f"Scanning directory: {self.config.ORIGINALS_DIR}")
-        
-        book_files = []
-        unprocessed_files = []
-        
-        # Check files in Originals directory
-        for file in self.config.ORIGINALS_DIR.glob("*"):
-            if file.suffix.lower() in ['.pdf', '.epub', '.mobi']:
-                book_files.append(file)
-                logger.debug(f"Found book: {file.name}")
-        
-        # Look for files that haven't been moved yet
-        for file in self.config.VAULT_DIR.rglob("*"):
-            if any(skip_dir in str(file) for skip_dir in ["Books/Annotations", "Books/Markdown", "Books/Annotated", "Books/Originals"]):
-                continue
+    def _process_single_book(self, file_path: Path) -> Optional[Tuple[str, Dict]]:
+        """Process a single book file."""
+        try:
+            logger.info(f"Processing book: {file_path}")
             
-            if file.suffix.lower() in ['.pdf', '.epub', '.mobi']:
-                try:
-                    new_path = self.config.ORIGINALS_DIR / file.name
-                    file.rename(new_path)
-                    book_files.append(new_path)
-                    logger.info(f"Moved {file.name} to Originals directory")
-                except Exception as e:
-                    logger.error(f"Error moving {file}: {e}")
-                    book_files.append(file)
-            elif file.suffix.lower() in ['.txt', '.doc', '.docx', '.rtf']:
-                unprocessed_files.append(file)
-        
-        if unprocessed_files:
-            logger.warning("\nFiles that need manual processing:")
-            for file in unprocessed_files:
-                logger.warning(f"- {file}")
-        
-        logger.info(f"Found {len(book_files)} book files to process")
-        return book_files 
+            # Extract metadata
+            metadata = self.calibre.extract_metadata(file_path)
+            logger.debug(f"Extracted metadata: {metadata}")
+            
+            # Create landing page and get back the title and updated metadata
+            title, metadata = self.markdown_processor.create_landing_page(metadata)
+            logger.debug(f"Created landing page for: {title}")
+            
+            return title, metadata
+            
+        except Exception as e:
+            logger.error(f"Error processing {file_path}: {e}", exc_info=True)
+            return None 
