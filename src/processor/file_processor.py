@@ -27,7 +27,7 @@ class FileProcessor:
         self.config = config
         self._ensure_directories()
         self.supported_formats = ['.pdf', '.epub']
-        self.convertible_formats = ['.txt', '.docx', '.doc', '.rtf', '.odt', '.azw', '.azw3', '.xhtml', '.html', '.mobi']
+        self.convertible_formats = ['.docx', '.doc', '.rtf', '.odt', '.azw', '.azw3', '.xhtml', '.html', '.mobi']
         # File hashes cache to avoid recalculating
         self.file_hashes = {}
 
@@ -202,10 +202,21 @@ class FileProcessor:
                 logger.error(f"Error sanitizing filename {file_path.name}: {str(e)}")
                 clean_name = file_path.name  # Fall back to original name
             
-            # Check if already processed by name
+            # Check if file with same name already exists in originals
             if clean_name in existing_files:
-                logger.info(f"File already processed by name: {clean_name}")
-                return "skipped", existing_files[clean_name]
+                # Check if the extension is the same (same format)
+                if file_path.suffix.lower() == existing_files[clean_name].suffix.lower():
+                    logger.info(f"File already exists in the same format: {clean_name}")
+                    return "skipped", existing_files[clean_name]
+                else:
+                    # Different format, might need conversion
+                    logger.info(f"File exists but in different format: {clean_name}")
+            
+            # Check if a landing page already exists for this book
+            landing_path = self.config.LANDING_DIR / clean_name.replace(file_path.suffix, '.md')
+            if landing_path.exists():
+                logger.info(f"Landing page already exists: {landing_path.name}, skipping processing")
+                return "skipped", file_path
             
             # Rename file if necessary
             clean_path = file_path
@@ -234,10 +245,35 @@ class FileProcessor:
                 converted_path = self._convert_file(file_path)
                 
                 if converted_path:
+                    # Before moving, check if this converted file would be a duplicate
+                    converted_hash = self._calculate_file_hash(converted_path)
+                    if converted_hash in existing_hashes:
+                        logger.info(f"Converted file is a duplicate: {converted_path.name}")
+                        try:
+                            converted_path.unlink()  # Delete the converted file
+                        except Exception:
+                            pass
+                        return "skipped", file_path
+                    
                     # Move the converted file to originals
                     dest_path = self.move_to_originals(converted_path)
                     if dest_path:
                         logger.info(f"Converted and processed: {file_path.name} -> {dest_path.name}")
+                        
+                        # If the original file was inside a subdirectory (like unpacked MOBI), 
+                        # try to remove the subdirectory
+                        if file_path.parent != self.config.BUCKET_DIR and file_path.parent.is_dir():
+                            try:
+                                # First try to remove the file
+                                file_path.unlink()
+                                
+                                # See if the directory is now empty and can be removed
+                                if not any(file_path.parent.iterdir()):
+                                    file_path.parent.rmdir()
+                                    logger.info(f"Removed empty directory: {file_path.parent}")
+                            except Exception as e:
+                                logger.warning(f"Could not clean up original file or directory: {str(e)}")
+                                
                         return "converted", dest_path
                     else:
                         # Clean up if move fails

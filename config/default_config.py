@@ -11,6 +11,9 @@ class Config:
     # Index file location
     INDEX_FILE = BOOKS_DIR / "Book Index.md"
     BUCKET_DIR = VAULT_DIR / "Bucket"
-    # Supported file types
-    BOOK_FORMATS = ['.pdf', '.epub', '.mobi']
-    MANUAL_FORMATS = ['.txt', '.doc', '.docx', '.rtf']
+    # Supported file types (used for direct access, no conversion needed)
+    BOOK_FORMATS = ['.pdf', '.epub']
+    # Formats that need manual processing (not automatically processed)
+    MANUAL_FORMATS = ['.rtf']
+    # Formats that can be automatically converted to supported formats
+    CONVERTIBLE_FORMATS = ['.docx', '.doc', '.rtf', '.odt', '.azw', '.azw3', '.xhtml', '.html', '.mobi']

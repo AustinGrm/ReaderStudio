@@ -38,18 +38,60 @@ class BookProcessor:
         
         # Collect all book files from originals dir
         book_files = []
+        existing_landing_pages = set()
+        
         try:
+            # First check for existing landing pages to avoid reprocessing
+            if self.config.LANDING_DIR.exists():
+                for landing_file in self.config.LANDING_DIR.glob("*.md"):
+                    if landing_file.name != self.config.INDEX_FILE.name and landing_file.is_file():
+                        # Store the base name without .md extension
+                        existing_landing_pages.add(landing_file.stem)
+                logger.info(f"Found {len(existing_landing_pages)} existing landing pages")
+            
+            # Now collect only files that don't already have landing pages
             if self.config.ORIGINALS_DIR.exists():
                 for file in self.config.ORIGINALS_DIR.glob("*"):
-                    if file.is_file() and file.suffix.lower() in ['.pdf', '.epub', '.mobi']:
+                    if (file.is_file() and 
+                        file.suffix.lower() in ['.pdf', '.epub'] and 
+                        file.stem not in existing_landing_pages):
                         book_files.append(file)
                 
-                logger.info(f"\nFound {len(book_files)} book files to process")
+                logger.info(f"\nFound {len(book_files)} new book files to process")
+                
+                # Debug number of skipped files due to existing landing pages
+                skipped_count = sum(1 for f in self.config.ORIGINALS_DIR.glob("*") 
+                                    if f.is_file() and f.suffix.lower() in ['.pdf', '.epub'] 
+                                    and f.stem in existing_landing_pages)
+                if skipped_count > 0:
+                    logger.info(f"Skipping {skipped_count} files that already have landing pages")
             else:
                 logger.warning(f"Originals directory not found: {self.config.ORIGINALS_DIR}")
         except Exception as e:
             logger.error(f"Error collecting book files: {str(e)}")
             # If we can't collect book files, we'll proceed with an empty list
+        
+        # If no new files to process, we can skip metadata extraction
+        if not book_files:
+            logger.info("No new books to process")
+            if processed_files:
+                logger.info("Updating index to include previously processed books")
+                try:
+                    all_entries = []
+                    # Create entries from all existing landing pages
+                    for landing_page in self.config.LANDING_DIR.glob("*.md"):
+                        if landing_page.name != self.config.INDEX_FILE.name and landing_page.is_file():
+                            # Create a basic entry with just the title
+                            metadata = {'title': landing_page.stem, 'has_landing_page': True}
+                            all_entries.append((landing_page.stem, metadata))
+                    
+                    # Create/update the index with all entries
+                    if all_entries:
+                        self.index_processor.create_index(all_entries)
+                        logger.info(f"Updated index with {len(all_entries)} entries")
+                except Exception as e:
+                    logger.error(f"Error updating index: {str(e)}")
+            return
         
         # First pass: Create book entries with basic metadata
         book_entries = []
@@ -90,15 +132,24 @@ class BookProcessor:
                 # Still include this entry in final_entries to maintain the book count
                 final_entries.append((title, metadata))
         
-        # Create the index
-        if final_entries:
-            try:
+        # Create the index - include both new and existing landing pages
+        try:
+            # Add existing landing pages that weren't processed this time
+            for landing_page in self.config.LANDING_DIR.glob("*.md"):
+                if (landing_page.name != self.config.INDEX_FILE.name and 
+                    landing_page.is_file() and 
+                    landing_page.stem not in [entry[0] for entry in final_entries]):
+                    # Create a basic entry with just the title
+                    metadata = {'title': landing_page.stem, 'has_landing_page': True}
+                    final_entries.append((landing_page.stem, metadata))
+            
+            if final_entries:
                 self.index_processor.create_index(final_entries)
                 logger.info(f"Created index with {len(final_entries)} entries")
-            except Exception as e:
-                logger.error(f"Error creating index: {str(e)}")
-        else:
-            logger.warning("No entries to index")
+            else:
+                logger.warning("No entries to index")
+        except Exception as e:
+            logger.error(f"Error creating index: {str(e)}")
 
     def _process_single_book(self, file_path: Path) -> Optional[Tuple[str, Dict[str, Any]]]:
         """Process a single book file with comprehensive error handling."""
