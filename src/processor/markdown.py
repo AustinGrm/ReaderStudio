@@ -120,6 +120,12 @@ class MarkdownProcessor:
         # Add annotation document link first (this is the main reading link)
         if 'annotation_path' in metadata:
             content_lines.append(f"- [[{metadata['annotation_path']}|Read & Annotate]]")
+            
+            # Add direct link to open in Obsidian Annotator if we have the original file
+            if 'path' in metadata and metadata['path']:
+                # Create a direct link to open with Annotator
+                annotator_link = f"- [Open in Annotator]({metadata['path']})"
+                content_lines.append(annotator_link)
         
         # Add markdown version if found - link directly to the markdown file
         if 'markdown_file' in metadata:
@@ -140,6 +146,23 @@ class MarkdownProcessor:
             f"- **Progress**: {int(float(metadata.get('reading_progress', 0)) * 100)}%",
             "\n### Progress Bar",
             self._create_progress_bar(metadata.get('reading_progress', 0)),
+        ])
+        
+        # Add separate Highlights & Annotations section
+        content_lines.extend([
+            "\n## Highlights & Annotations",
+            "\n### Direct Links to Highlights",
+            "<!-- Automatically populated by annotation syncer -->",
+            "\n### Kindle Highlights",
+            "> [!quote]",
+            "> Add Kindle highlights here",
+            "\n### Obsidian Annotations",
+            "> [!highlight]+ ",
+            "> Add Obsidian Annotator highlights here",
+        ])
+        
+        # Add Notes & Highlights section
+        content_lines.extend([
             "\n## Notes & Highlights",
             "\n### Key Concepts",
             "- ",
@@ -179,15 +202,27 @@ class MarkdownProcessor:
         # Create the relative path for the parent document
         parent_doc_path = Path("Books") / f"{safe_title}.md"
         
+        # Check if this is a clippings-only book (no actual file)
+        is_clippings_only = False
+        if 'tags' in metadata and 'clippings-only' in metadata['tags']:
+            is_clippings_only = True
+            logger.info(f"Creating annotation document for clippings-only book: {safe_title}")
+        
         # Build YAML frontmatter
         yaml_lines = [
             "---",
             f"title: \"{metadata['title']} - Annotations\"",
             f"author: \"{metadata.get('author', 'Unknown')}\"",
-            f"annotation-target: {metadata['path']}",
-            f"parent_document: {parent_doc_path}",
-            "---"
         ]
+        
+        # Only add annotation-target if we have a real file and it exists
+        if not is_clippings_only and 'path' in metadata and Path(metadata['path']).exists():
+            yaml_lines.append(f"annotation-target: {metadata['path']}")
+        else:
+            yaml_lines.append("# No annotation target - clippings only or file not found")
+            
+        yaml_lines.append(f"parent_document: {parent_doc_path}")
+        yaml_lines.append("---")
         
         yaml_frontmatter = "\n".join(yaml_lines)
         
@@ -195,8 +230,12 @@ class MarkdownProcessor:
         annotation_content = (
             f"{yaml_frontmatter}\n\n"
             f"# {metadata.get('title')} - Annotations\n\n"
-            "This document is for annotating the original file using the Obsidian Annotator plugin.\n"
         )
+        
+        if not is_clippings_only:
+            annotation_content += "This document is for annotating the original file using the Obsidian Annotator plugin.\n"
+        else:
+            annotation_content += "This document contains imported highlights and annotations from external sources.\n"
         
         # Preserve existing content if file exists
         if annotation_path.exists():
@@ -213,7 +252,7 @@ class MarkdownProcessor:
         annotation_path.write_text(annotation_content)
         logger.info(f"Created/updated annotation document: {annotation_path.name}")
         
-        return annotation_path 
+        return annotation_path
 
     def match_markdowns_to_books(self, book_entries: List[Tuple[str, Dict]]) -> List[Tuple[str, Dict]]:
         """Match markdown directories to books after indexing."""

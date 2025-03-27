@@ -4,9 +4,11 @@ import os
 import subprocess
 import tempfile
 import hashlib
+import calendar
 from pathlib import Path
 from typing import List, Optional, Dict, Tuple, Set
 from ..utils.logger import setup_logger
+from ..metadata.calibre import CalibreMetadata
 
 logger = setup_logger()
 
@@ -30,6 +32,8 @@ class FileProcessor:
         self.convertible_formats = ['.docx', '.doc', '.rtf', '.odt', '.azw', '.azw3', '.xhtml', '.html', '.mobi']
         # File hashes cache to avoid recalculating
         self.file_hashes = {}
+        # Initialize calibre metadata extractor
+        self.calibre = CalibreMetadata(config)
 
     def _ensure_directories(self):
         """Create necessary directories if they don't exist."""
@@ -204,19 +208,60 @@ class FileProcessor:
             
             # Check if file with same name already exists in originals
             if clean_name in existing_files:
+                existing_path = existing_files[clean_name]
+                
                 # Check if the extension is the same (same format)
-                if file_path.suffix.lower() == existing_files[clean_name].suffix.lower():
-                    logger.info(f"File already exists in the same format: {clean_name}")
-                    return "skipped", existing_files[clean_name]
+                if file_path.suffix.lower() == existing_path.suffix.lower():
+                    # Same name, same format - might be a different version (edition)
+                    # Extract metadata to check publication date/year if available
+                    try:
+                        new_metadata = self.calibre.extract_metadata(file_path)
+                        existing_metadata = self.calibre.extract_metadata(existing_path)
+                        
+                        new_year = self._extract_publication_year(new_metadata)
+                        existing_year = self._extract_publication_year(existing_metadata)
+                        
+                        if new_year and existing_year:
+                            logger.info(f"Publication years - New: {new_year}, Existing: {existing_year}")
+                            
+                            if new_year > existing_year:
+                                # New file is newer, keep it with a different name
+                                logger.info(f"New file is a newer edition ({new_year} vs {existing_year})")
+                                clean_name = f"{file_path.stem} ({new_year}){file_path.suffix}"
+                            elif new_year < existing_year:
+                                # Existing file is newer, skip this one
+                                logger.info(f"Existing file is a newer edition ({existing_year} vs {new_year})")
+                                return "skipped", existing_path
+                            else:
+                                # Same year, treat as duplicate with different content
+                                logger.info(f"Same publication year ({new_year}), treating as variant")
+                                # Will continue to the renaming code below
+                        else:
+                            logger.info("Publication years not available for comparison")
+                            # Continue to normal processing
+                    except Exception as e:
+                        logger.warning(f"Error comparing publication dates: {str(e)}")
+                        # Continue to normal processing if metadata extraction fails
+                    
+                    # Check if a landing page already exists for this book (use base name without year)
+                    base_name = re.sub(r'\s+\(\d{4}\)$', '', file_path.stem)
+                    landing_path = self.config.LANDING_DIR / f"{base_name}.md"
+                    if landing_path.exists():
+                        logger.info(f"Found existing landing page: {landing_path.name}")
+                        # We'll still process this file but log that a landing page exists
+                
+                elif file_path.suffix.lower() in self.supported_formats and existing_path.suffix.lower() not in self.supported_formats:
+                    # New file is in a better format, use it
+                    logger.info(f"New file is in a preferred format ({file_path.suffix}) compared to existing ({existing_path.suffix})")
+                    # Continue processing this file
+                elif file_path.suffix.lower() not in self.supported_formats and existing_path.suffix.lower() in self.supported_formats:
+                    # Existing file is in a better format, skip this one
+                    logger.info(f"Existing file is in a preferred format ({existing_path.suffix}) compared to new ({file_path.suffix})")
+                    return "skipped", existing_path
                 else:
-                    # Different format, might need conversion
-                    logger.info(f"File exists but in different format: {clean_name}")
-            
-            # Check if a landing page already exists for this book
-            landing_path = self.config.LANDING_DIR / clean_name.replace(file_path.suffix, '.md')
-            if landing_path.exists():
-                logger.info(f"Landing page already exists: {landing_path.name}, skipping processing")
-                return "skipped", file_path
+                    # Different formats, but neither is preferred - keep both
+                    logger.info(f"Different formats: {file_path.suffix} vs {existing_path.suffix}")
+                    # Continue processing this file
             
             # Rename file if necessary
             clean_path = file_path
@@ -229,7 +274,7 @@ class FileProcessor:
                     logger.error(f"Error renaming file {file_path} to {clean_name}: {str(e)}")
                     # Continue with original name if rename fails
             
-            # Check if file is of supported type
+            # Process based on file type
             if file_path.suffix.lower() in self.supported_formats:
                 # Move directly to originals
                 dest_path = self.move_to_originals(file_path)
@@ -586,3 +631,52 @@ class FileProcessor:
         except Exception as e:
             logger.error(f"Unexpected error moving file {file_path}: {str(e)}")
             return None
+
+    def _extract_publication_year(self, metadata: Dict) -> Optional[int]:
+        """Extract publication year from metadata if available."""
+        if not metadata:
+            return None
+            
+        # Try different metadata fields
+        # First check explicit year field
+        if 'year' in metadata and metadata['year']:
+            try:
+                year = int(metadata['year'])
+                if 1900 <= year <= 2100:  # Sanity check
+                    return year
+            except (ValueError, TypeError):
+                pass
+        
+        # Try to extract from date field
+        if 'pubdate' in metadata and metadata['pubdate']:
+            date_str = metadata['pubdate']
+            try:
+                # Check for ISO format date (YYYY-MM-DD)
+                if re.match(r'^\d{4}-\d{2}-\d{2}$', date_str):
+                    return int(date_str.split('-')[0])
+                    
+                # Check for other common formats
+                for format_str in ['%Y-%m-%d', '%Y/%m/%d', '%d/%m/%Y', '%m/%d/%Y', '%Y']:
+                    try:
+                        import datetime
+                        dt = datetime.datetime.strptime(date_str, format_str)
+                        return dt.year
+                    except ValueError:
+                        continue
+            except Exception:
+                pass
+        
+        # Try to extract from publisher info
+        if 'publisher' in metadata and metadata['publisher']:
+            publisher = metadata['publisher']
+            # Look for years like "Publisher, 2020" or "Publisher (2020)"
+            year_match = re.search(r'(\d{4})', publisher)
+            if year_match:
+                try:
+                    year = int(year_match.group(1))
+                    if 1900 <= year <= 2100:  # Sanity check
+                        return year
+                except (ValueError, TypeError):
+                    pass
+        
+        return None

@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import List, Dict, Tuple, Optional, Any
+from typing import List, Dict, Tuple, Optional, Any, Set
 from ..metadata.calibre import CalibreMetadata
 from .file_processor import FileProcessor
 from .markdown import MarkdownProcessor
@@ -8,6 +8,7 @@ from ..utils.logger import setup_logger
 import os
 import re
 import traceback
+from rapidfuzz import fuzz
 
 logger = setup_logger()
 
@@ -36,9 +37,10 @@ class BookProcessor:
             # Continue execution even if bucket processing fails
             processed_files = []
         
-        # Collect all book files from originals dir
+        # Collect existing books and landing pages for duplicate detection
         book_files = []
-        existing_landing_pages = set()
+        existing_landing_pages = {}
+        existing_metadata = {}
         
         try:
             # First check for existing landing pages to avoid reprocessing
@@ -46,10 +48,28 @@ class BookProcessor:
                 for landing_file in self.config.LANDING_DIR.glob("*.md"):
                     if landing_file.name != self.config.INDEX_FILE.name and landing_file.is_file():
                         # Store the base name without .md extension
-                        existing_landing_pages.add(landing_file.stem)
+                        existing_landing_pages[landing_file.stem] = landing_file
+                        
+                        # Try to extract title and author from landing page
+                        try:
+                            content = landing_file.read_text(encoding='utf-8')
+                            title_match = re.search(r'title: "(.*?)"', content)
+                            author_match = re.search(r'author: "(.*?)"', content)
+                            
+                            title = title_match.group(1) if title_match else landing_file.stem
+                            author = author_match.group(1) if author_match else "Unknown"
+                            
+                            existing_metadata[landing_file.stem] = {
+                                'title': title,
+                                'author': author,
+                                'landing_page': landing_file
+                            }
+                        except Exception as e:
+                            logger.debug(f"Error reading metadata from {landing_file.name}: {str(e)}")
+                
                 logger.info(f"Found {len(existing_landing_pages)} existing landing pages")
             
-            # Now collect only files that don't already have landing pages
+            # Now collect only files that don't already have exact landing pages
             if self.config.ORIGINALS_DIR.exists():
                 for file in self.config.ORIGINALS_DIR.glob("*"):
                     if (file.is_file() and 
@@ -59,31 +79,70 @@ class BookProcessor:
                 
                 logger.info(f"\nFound {len(book_files)} new book files to process")
                 
-                # Debug number of skipped files due to existing landing pages
+                # Debug number of skipped files due to exact name match
                 skipped_count = sum(1 for f in self.config.ORIGINALS_DIR.glob("*") 
                                     if f.is_file() and f.suffix.lower() in ['.pdf', '.epub'] 
                                     and f.stem in existing_landing_pages)
                 if skipped_count > 0:
-                    logger.info(f"Skipping {skipped_count} files that already have landing pages")
+                    logger.info(f"Skipping {skipped_count} files that have exact landing page matches")
             else:
                 logger.warning(f"Originals directory not found: {self.config.ORIGINALS_DIR}")
         except Exception as e:
             logger.error(f"Error collecting book files: {str(e)}")
             # If we can't collect book files, we'll proceed with an empty list
         
-        # If no new files to process, we can skip metadata extraction
-        if not book_files:
+        # Extract metadata for all new files
+        book_entries = []
+        books_with_metadata = []
+        
+        for file_path in book_files:
+            try:
+                metadata = self.calibre.extract_metadata(file_path)
+                title = metadata.get('title', file_path.stem)
+                author = metadata.get('author', "Unknown")
+                
+                # Check if this might be a duplicate of an existing book with a different name
+                duplicate_landing_page = self._find_duplicate_by_metadata(title, author, existing_metadata)
+                
+                if duplicate_landing_page:
+                    logger.info(f"Found existing landing page for '{title}' by {author}: {duplicate_landing_page.name}")
+                    # Use the existing landing page's metadata but update with the new file path
+                    landing_name = duplicate_landing_page.stem
+                    metadata.update({
+                        'existing_landing_page': str(duplicate_landing_page),
+                        'duplicate_of': landing_name
+                    })
+                
+                books_with_metadata.append((file_path, title, author))
+                book_entries.append((title, metadata))
+                logger.info(f"Extracted metadata for: {title} by {author}")
+            except Exception as e:
+                logger.error(f"Error extracting metadata from {file_path}: {str(e)}")
+                # Create a basic entry with filename as title so we can still process this file
+                basic_metadata = {
+                    'title': file_path.stem,
+                    'author': "Unknown",
+                    'path': str(file_path),
+                    'filename': file_path.name,
+                    'error': f"Metadata extraction failed: {str(e)}"
+                }
+                book_entries.append((file_path.stem, basic_metadata))
+        
+        # If no new files to process, we can skip the rest
+        if not book_entries:
             logger.info("No new books to process")
             if processed_files:
                 logger.info("Updating index to include previously processed books")
                 try:
                     all_entries = []
                     # Create entries from all existing landing pages
-                    for landing_page in self.config.LANDING_DIR.glob("*.md"):
-                        if landing_page.name != self.config.INDEX_FILE.name and landing_page.is_file():
-                            # Create a basic entry with just the title
-                            metadata = {'title': landing_page.stem, 'has_landing_page': True}
-                            all_entries.append((landing_page.stem, metadata))
+                    for landing_name, landing_data in existing_metadata.items():
+                        metadata = {
+                            'title': landing_data.get('title', landing_name),
+                            'author': landing_data.get('author', "Unknown"),
+                            'has_landing_page': True
+                        }
+                        all_entries.append((landing_name, metadata))
                     
                     # Create/update the index with all entries
                     if all_entries:
@@ -93,63 +152,133 @@ class BookProcessor:
                     logger.error(f"Error updating index: {str(e)}")
             return
         
-        # First pass: Create book entries with basic metadata
-        book_entries = []
-        for file_path in book_files:
-            try:
-                metadata = self.calibre.extract_metadata(file_path)
-                title = metadata.get('title', file_path.stem)
-                book_entries.append((title, metadata))
-                logger.info(f"Extracted metadata for: {title}")
-            except Exception as e:
-                logger.error(f"Error extracting metadata from {file_path}: {str(e)}")
-                # Create a basic entry with filename as title so we can still process this file
-                basic_metadata = {
-                    'title': file_path.stem,
-                    'path': str(file_path),
-                    'filename': file_path.name,
-                    'error': f"Metadata extraction failed: {str(e)}"
-                }
-                book_entries.append((file_path.stem, basic_metadata))
+        # Process books to create or update landing pages
+        processed_entries = []
         
-        # Second pass: Match with markdown directories
-        matched_entries = []
-        try:
-            matched_entries = self.markdown_processor.match_markdowns_to_books(book_entries)
-        except Exception as e:
-            logger.error(f"Error matching markdowns to books: {str(e)}")
-            # Fall back to unmatched entries
-            matched_entries = book_entries
-        
-        # Third pass: Create landing pages
-        final_entries = []
-        for title, metadata in matched_entries:
+        for title, metadata in book_entries:
             try:
+                # Check if this is a duplicate with an existing landing page
+                if 'existing_landing_page' in metadata:
+                    landing_page = Path(metadata['existing_landing_page'])
+                    logger.info(f"Using existing landing page for {title}: {landing_page.name}")
+                    
+                    # We still want to update some metadata
+                    updated_metadata = metadata.copy()
+                    processed_entries.append((landing_page.stem, updated_metadata))
+                    continue
+                
+                # Not a duplicate, process normally
+                # Match with markdown directories
+                try:
+                    markdown_match = self.markdown_processor.find_matching_markdown(title)
+                    if markdown_match:
+                        md_dir, md_file = markdown_match
+                        metadata['markdown_path'] = str(md_dir.relative_to(self.config.VAULT_DIR))
+                        metadata['markdown_file'] = str(md_file.relative_to(self.config.VAULT_DIR))
+                        logger.info(f"Found markdown match for {title}: {md_dir.name}")
+                except Exception as e:
+                    logger.error(f"Error finding markdown match for {title}: {str(e)}")
+                
+                # Create landing page
                 title, updated_metadata = self.markdown_processor.create_landing_page(metadata)
-                final_entries.append((title, updated_metadata))
+                processed_entries.append((title, updated_metadata))
+                logger.info(f"Created/updated landing page for {title}")
             except Exception as e:
-                logger.error(f"Error creating landing page for {title}: {str(e)}")
-                # Still include this entry in final_entries to maintain the book count
-                final_entries.append((title, metadata))
+                logger.error(f"Error processing book {title}: {str(e)}")
+                # Still include in processed entries to maintain the count
+                processed_entries.append((title, metadata))
         
         # Create the index - include both new and existing landing pages
         try:
-            # Add existing landing pages that weren't processed this time
-            for landing_page in self.config.LANDING_DIR.glob("*.md"):
-                if (landing_page.name != self.config.INDEX_FILE.name and 
-                    landing_page.is_file() and 
-                    landing_page.stem not in [entry[0] for entry in final_entries]):
-                    # Create a basic entry with just the title
-                    metadata = {'title': landing_page.stem, 'has_landing_page': True}
-                    final_entries.append((landing_page.stem, metadata))
+            all_entries = []
             
-            if final_entries:
-                self.index_processor.create_index(final_entries)
-                logger.info(f"Created index with {len(final_entries)} entries")
+            # Add newly processed entries
+            all_entries.extend(processed_entries)
+            
+            # Add existing landing pages that weren't processed this time
+            for landing_name, landing_data in existing_metadata.items():
+                if landing_name not in [entry[0] for entry in all_entries]:
+                    metadata = {
+                        'title': landing_data.get('title', landing_name),
+                        'author': landing_data.get('author', "Unknown"),
+                        'has_landing_page': True
+                    }
+                    all_entries.append((landing_name, metadata))
+            
+            if all_entries:
+                self.index_processor.create_index(all_entries)
+                logger.info(f"Created index with {len(all_entries)} entries")
             else:
                 logger.warning("No entries to index")
         except Exception as e:
             logger.error(f"Error creating index: {str(e)}")
+
+    def _find_duplicate_by_metadata(self, title: str, author: str, existing_metadata: Dict) -> Optional[Path]:
+        """
+        Find potential duplicates by comparing title and author with existing books.
+        
+        Args:
+            title: Title of the new book
+            author: Author of the new book
+            existing_metadata: Dictionary of existing book metadata
+            
+        Returns:
+            Path to an existing landing page if a duplicate is found, None otherwise
+        """
+        if not title or not author or not existing_metadata:
+            return None
+            
+        # Normalize inputs
+        title = title.lower().strip()
+        author = author.lower().strip()
+        
+        best_match = None
+        best_score = 0
+        threshold = 85  # Minimum matching score (0-100)
+        
+        for landing_name, data in existing_metadata.items():
+            existing_title = data.get('title', '').lower().strip()
+            existing_author = data.get('author', '').lower().strip()
+            
+            if not existing_title:
+                continue
+                
+            # Calculate similarity scores
+            title_score = fuzz.ratio(title, existing_title)
+            
+            # Higher weight to title match, but also consider author match
+            if existing_author and author:
+                author_score = fuzz.ratio(author, existing_author)
+                
+                # Only consider author match if titles are somewhat similar
+                if title_score > 60:
+                    # Combined score with more weight to title
+                    combined_score = (title_score * 0.7) + (author_score * 0.3)
+                else:
+                    combined_score = title_score
+            else:
+                # Title-only match needs to be higher
+                combined_score = title_score if title_score > 90 else 0
+            
+            # High title similarity alone might be enough
+            if title_score > 95:
+                combined_score = max(combined_score, title_score * 0.9)
+            
+            # Debug logging for close matches
+            if combined_score > 70:
+                logger.debug(f"Potential duplicate: '{title}' vs '{existing_title}'")
+                logger.debug(f"  Title score: {title_score}, Author score: {author_score if 'author_score' in locals() else 'N/A'}")
+                logger.debug(f"  Combined score: {combined_score}")
+            
+            # Track best match
+            if combined_score > best_score and combined_score >= threshold:
+                best_score = combined_score
+                best_match = data.get('landing_page')
+        
+        if best_match:
+            logger.info(f"Found duplicate with score {best_score:.1f}: {best_match.name}")
+            
+        return best_match
 
     def _process_single_book(self, file_path: Path) -> Optional[Tuple[str, Dict[str, Any]]]:
         """Process a single book file with comprehensive error handling."""

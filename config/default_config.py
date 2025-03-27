@@ -1,19 +1,31 @@
 from pathlib import Path
+import os
 
 class Config:
-    VAULT_DIR = Path("/Users/austinavent/Documents/VAULTTEST/TESTING/")
-    BOOKS_DIR = VAULT_DIR / "Books"
-    ANNOTATION_DIR = BOOKS_DIR / "Annotations"
-    INDEX_FILE = BOOKS_DIR / "Book Index.md"
-    MARKDOWN_DIR = BOOKS_DIR / "Markdowns"
-    ORIGINALS_DIR = BOOKS_DIR / "Originals" 
-    LANDING_DIR = BOOKS_DIR
-    # Index file location
-    INDEX_FILE = BOOKS_DIR / "Book Index.md"
+    """Configuration for the book processing system."""
+    
+    # Base directories
+    VAULT_DIR = Path(os.environ.get("VAULT_DIR", "/Users/austinavent/Documents/VAULTTEST/TESTING"))
     BUCKET_DIR = VAULT_DIR / "Bucket"
-    # Supported file types (used for direct access, no conversion needed)
+    ORIGINALS_DIR = VAULT_DIR / "Books/Originals"
+    LANDING_DIR = VAULT_DIR / "Books"
+    MARKDOWN_DIR = VAULT_DIR / "Books/Markdowns"
+    ANNOTATIONS_DIR = VAULT_DIR / "Books/Annotations"
+    
+    # Files
+    INDEX_FILE = LANDING_DIR / "Book Index.md"
+    KINDLE_CLIPPINGS_PATH = Path(os.environ.get("KINDLE_CLIPPINGS_PATH", "/Users/austinavent/Documents/My Clippings.txt"))
+    
+    # Book formats
     BOOK_FORMATS = ['.pdf', '.epub']
-    # Formats that need manual processing (not automatically processed)
-    MANUAL_FORMATS = ['.rtf']
-    # Formats that can be automatically converted to supported formats
     CONVERTIBLE_FORMATS = ['.docx', '.doc', '.rtf', '.odt', '.azw', '.azw3', '.xhtml', '.html', '.mobi']
+    
+    # Markdown settings
+    ANNOTATION_TAG = "annotation"
+    BOOK_TAG = "book"
+    
+    # Calibre settings
+    CALIBRE_PATH = "ebook-meta"  # Path to calibre command line tool
+    
+    # Debug settings
+    DEBUG = os.environ.get("DEBUG", "false").lower() == "true"
