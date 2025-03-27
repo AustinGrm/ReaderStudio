@@ -82,11 +82,13 @@ class IndexProcessor:
 
     def match_landing_pages_with_markdown(self):
         """Match landing pages with markdown files using test_matching from experimental/test_chatmatching.py."""
+        print("Matching landing pages with markdown files...")
         logger.info("Matching landing pages with markdown files...")
         
         try:
             from rapidfuzz import fuzz, process
         except ImportError:
+            print("rapidfuzz package is required for matching. Install with: python -m pip install rapidfuzz")
             logger.error("rapidfuzz package is required for matching. Install with: python -m pip install rapidfuzz")
             return
         
@@ -101,14 +103,12 @@ class IndexProcessor:
             for file in files:
                 # Append full path of the file
                 original_files.append(os.path.join(root, file))
-        logger.info("\n=== Original Files ===")
-        logger.info(f"Found {len(original_files)} original files:")
-        for orig in original_files:
-            logger.debug(f"  - {os.path.splitext(os.path.basename(orig))[0]}")
+        print(f"\n=== Original Files ===")
+        print(f"Found {len(original_files)} original files.")
         
         # Get all landing pages
         landing_pages = list(BOOKS_DIR.glob("*.md"))
-        logger.info(f"Found {len(landing_pages)} landing pages.")
+        print(f"Found {len(landing_pages)} landing pages.")
         
         # Create a mapping from original file stem to landing page
         original_to_landing = {}
@@ -116,15 +116,19 @@ class IndexProcessor:
             orig_stem = os.path.splitext(os.path.basename(original_file))[0]
             # Find matching landing page
             for landing_page in landing_pages:
-                content = landing_page.read_text()
-                # Check if original file is mentioned in the landing page content
-                if orig_stem in content:
-                    original_to_landing[original_file] = landing_page
-                    break
+                try:
+                    content = landing_page.read_text()
+                    # Check if original file is mentioned in the landing page content
+                    if orig_stem in content:
+                        original_to_landing[original_file] = landing_page
+                        print(f"- Original '{orig_stem}' matched to landing page '{landing_page.name}'")
+                        break
+                except Exception as e:
+                    print(f"Error reading landing page {landing_page}: {e}")
         
         # List markdown files from subdirectories using os.walk
         markdown_files = []
-        logger.info("\n=== Markdown Files from Subdirectories ===")
+        print("\n=== Markdown Files from Subdirectories ===")
         for root, dirs, files in os.walk(MARKDOWN_DIR):
             # Skip the top-level MARKDOWN_DIR itself
             if Path(root) == MARKDOWN_DIR:
@@ -133,21 +137,21 @@ class IndexProcessor:
                 if file.lower().endswith(".md"):
                     full_path = os.path.join(root, file)
                     markdown_files.append(full_path)
-                    logger.info(f"  - {os.path.basename(root)} : {file}")
-        logger.info(f"\nTotal markdown files found: {len(markdown_files)}")
+                    print(f"  - {os.path.basename(root)} : {file}")
+        print(f"\nTotal markdown files found: {len(markdown_files)}")
         
         if not markdown_files:
-            logger.warning("No markdown files found in subdirectories.")
+            print("No markdown files found in subdirectories.")
             return
 
-        logger.info("\n=== Matching Results ===")
+        print("\n=== Matching Results ===")
         updated_count = 0
         
         # For each markdown file, find the best matching original file
         for md_file in markdown_files:
             md_dir_name = os.path.basename(os.path.dirname(md_file))
             md_name = os.path.splitext(os.path.basename(md_file))[0]
-            logger.info(f"\nMatching for markdown file: '{md_name}' (from directory '{md_dir_name}')")
+            print(f"\nMatching for markdown dir: '{md_dir_name}'")
             
             # Build a list of original file stems for fuzzy matching
             original_stems = [os.path.splitext(os.path.basename(orig))[0] for orig in original_files]
@@ -160,16 +164,16 @@ class IndexProcessor:
                 limit=3
             )
             
-            logger.info("Top matches:")
+            print("Top matches:")
             for match_name, score, index in matches:
                 matched_file = original_files[index]
-                logger.info(f"  Score {score:>3}: '{match_name}' -> {os.path.basename(matched_file)}")
+                print(f"  Score {score:>3}: '{match_name}' -> {os.path.basename(matched_file)}")
             
             # Select best match if score is high enough
             if matches and matches[0][1] >= 60:  # Using 60 as threshold
                 best_match_name, best_score, best_index = matches[0]
                 best_match_file = original_files[best_index]
-                logger.info(f"✓ Best match: '{os.path.basename(best_match_file)}' with score {best_score}")
+                print(f"✓ Best match: '{os.path.basename(best_match_file)}' with score {best_score}")
                 
                 # Find the landing page associated with this original file
                 landing_page = original_to_landing.get(best_match_file)
@@ -182,7 +186,7 @@ class IndexProcessor:
                         # Create the markdown link
                         rel_path = Path(os.path.dirname(md_file)).relative_to(self.config.VAULT_DIR)
                         markdown_link = f"- [[{rel_path}/index|Markdown Version]]"
-                        logger.info(f"Adding link: {markdown_link}")
+                        print(f"Adding link: {markdown_link}")
                         
                         if markdown_link not in content:
                             # Find "Document Versions" section
@@ -200,16 +204,16 @@ class IndexProcessor:
                                 
                                 landing_page.write_text(updated_content)
                                 updated_count += 1
-                                logger.info(f"Updated {landing_page.name} with link to {md_dir_name}")
+                                print(f"Updated {landing_page.name} with link to {md_dir_name}")
                             else:
-                                logger.warning(f"No 'Document Versions' section found in {landing_page.name}")
+                                print(f"No 'Document Versions' section found in {landing_page.name}")
                         else:
-                            logger.info(f"Link already exists in {landing_page.name}")
+                            print(f"Link already exists in {landing_page.name}")
                     except Exception as e:
-                        logger.error(f"Error updating landing page: {e}")
+                        print(f"Error updating landing page: {e}")
                 else:
-                    logger.warning(f"No landing page found for original file: {os.path.basename(best_match_file)}")
+                    print(f"No landing page found for original file: {os.path.basename(best_match_file)}")
             else:
-                logger.warning(f"✗ No good match found for markdown directory: {md_dir_name}")
+                print(f"✗ No good match found for markdown directory: {md_dir_name}")
         
-        logger.info(f"Matched and updated {updated_count} landing pages with markdown files.")
+        print(f"Matched and updated {updated_count} landing pages with markdown files.")
