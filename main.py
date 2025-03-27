@@ -25,6 +25,7 @@ def main():
     logger.debug(f"VAULT_DIR exists: {Config.VAULT_DIR.exists()}")
     logger.debug(f"BOOKS_DIR exists: {Config.BOOKS_DIR.exists()}")
     logger.debug(f"ORIGINALS_DIR exists: {Config.ORIGINALS_DIR.exists()}")
+    logger.debug(f"MARKDOWN_DIR exists: {Config.MARKDOWN_DIR.exists()}")
     
     if Config.ORIGINALS_DIR.exists():
         books = list(Config.ORIGINALS_DIR.glob("*"))

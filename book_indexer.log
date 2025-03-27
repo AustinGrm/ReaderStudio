@@ -2566,3 +2566,1208 @@ Checking directory: Thinking, Fast and Slow - Daniel Kahneman
 2025-03-26 15:19:31,768 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
 2025-03-26 15:19:31,768 - book_indexer - INFO - Created index with 5 entries
 2025-03-26 15:19:31,768 - book_indexer - INFO - Processing completed
+2025-03-27 10:42:51,273 - book_indexer - INFO - Logger initialized
+2025-03-27 10:42:51,296 - book_indexer - INFO - Starting book indexer
+2025-03-27 10:42:51,296 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 10:42:51,296 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 10:42:51,296 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 10:42:51,296 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 10:42:51,296 - book_indexer - INFO - Running full book processing
+2025-03-27 10:42:51,297 - book_indexer - INFO - Starting book processing
+2025-03-27 10:42:51,297 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-27 10:42:53,063 - book_indexer - INFO - 
+=== Matching Markdowns to Books ===
+2025-03-27 10:42:53,063 - book_indexer - INFO - 
+DEBUG: Exact string comparison:
+2025-03-27 10:42:53,063 - book_indexer - INFO - 
+Book filename: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,063 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:42:53,064 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:42:53,064 - book_indexer - INFO - Simple ratio: 31.707317073170728
+2025-03-27 10:42:53,064 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:42:53,064 - book_indexer - INFO - Partial ratio: 36.111111111111114
+2025-03-27 10:42:53,064 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,064 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,064 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:42:53,064 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,064 - book_indexer - INFO - Simple ratio: 100.0
+2025-03-27 10:42:53,064 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:42:53,064 - book_indexer - INFO - Partial ratio: 100.0
+2025-03-27 10:42:53,064 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,064 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,064 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,064 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'j k rowling harry potter the prequel' = 23.529411764705888
+2025-03-27 10:42:53,064 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'thinking fast and slow daniel kahneman' = 56.60377358490566
+2025-03-27 10:42:53,064 - book_indexer - INFO - ✓ Selected best match: 'Thinking, Fast and Slow - Daniel Kahneman' (score: 56.60377358490566)
+2025-03-27 10:42:53,065 - book_indexer - INFO - 
+Book filename: '48 Laws of Power, The - Robert Greene; Joost Elffers'
+2025-03-27 10:42:53,065 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:42:53,065 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:42:53,065 - book_indexer - INFO - Simple ratio: 36.55913978494624
+2025-03-27 10:42:53,065 - book_indexer - INFO - Token sort ratio: 41.30434782608695
+2025-03-27 10:42:53,065 - book_indexer - INFO - Partial ratio: 42.10526315789473
+2025-03-27 10:42:53,065 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,065 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:42:53,065 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:42:53,065 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,065 - book_indexer - INFO - Simple ratio: 30.107526881720425
+2025-03-27 10:42:53,065 - book_indexer - INFO - Token sort ratio: 34.40860215053764
+2025-03-27 10:42:53,065 - book_indexer - INFO - Partial ratio: 36.36363636363637
+2025-03-27 10:42:53,065 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,065 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:42:53,065 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,065 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'j k rowling harry potter the prequel' = 34.92063492063492
+2025-03-27 10:42:53,066 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'thinking fast and slow daniel kahneman' = 33.84615384615385
+2025-03-27 10:42:53,066 - book_indexer - WARNING - ✗ No suitable match found for: 48 Laws of Power, The - Robert Greene; Joost Elffers
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Book filename: 'Gypsy Jazz Guitar Chords'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Simple ratio: 24.615384615384617
+2025-03-27 10:42:53,066 - book_indexer - INFO - Token sort ratio: 18.75
+2025-03-27 10:42:53,066 - book_indexer - INFO - Partial ratio: 33.333333333333336
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,066 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:42:53,066 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Simple ratio: 21.53846153846154
+2025-03-27 10:42:53,066 - book_indexer - INFO - Token sort ratio: 21.53846153846154
+2025-03-27 10:42:53,066 - book_indexer - INFO - Partial ratio: 29.166666666666664
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,066 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:42:53,066 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,066 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'j k rowling harry potter the prequel' = 26.66666666666667
+2025-03-27 10:42:53,066 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'thinking fast and slow daniel kahneman' = 25.806451612903224
+2025-03-27 10:42:53,066 - book_indexer - WARNING - ✗ No suitable match found for: Gypsy Jazz Guitar Chords
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Book filename: 'Mastering Tai Chi The Great Courses'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Simple ratio: 39.473684210526315
+2025-03-27 10:42:53,066 - book_indexer - INFO - Token sort ratio: 37.33333333333333
+2025-03-27 10:42:53,066 - book_indexer - INFO - Partial ratio: 50.98039215686274
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,066 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:42:53,066 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,066 - book_indexer - INFO - Simple ratio: 28.947368421052634
+2025-03-27 10:42:53,066 - book_indexer - INFO - Token sort ratio: 34.210526315789465
+2025-03-27 10:42:53,066 - book_indexer - INFO - Partial ratio: 33.84615384615385
+2025-03-27 10:42:53,066 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,066 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:42:53,066 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,066 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'j k rowling harry potter the prequel' = 45.070422535211264
+2025-03-27 10:42:53,066 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'thinking fast and slow daniel kahneman' = 35.61643835616438
+2025-03-27 10:42:53,066 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 45.070422535211264)
+2025-03-27 10:42:53,067 - book_indexer - INFO - 
+Book filename: 'J. K. Rowling - Harry Potter The Prequel'
+2025-03-27 10:42:53,067 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:42:53,067 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:42:53,067 - book_indexer - INFO - Simple ratio: 98.76543209876543
+2025-03-27 10:42:53,067 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:42:53,067 - book_indexer - INFO - Partial ratio: 97.5
+2025-03-27 10:42:53,067 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,067 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:42:53,067 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:42:53,067 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:42:53,067 - book_indexer - INFO - Simple ratio: 29.629629629629626
+2025-03-27 10:42:53,067 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:42:53,067 - book_indexer - INFO - Partial ratio: 35.820895522388064
+2025-03-27 10:42:53,067 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:42:53,067 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:42:53,067 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:42:53,067 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'j k rowling harry potter the prequel' = 80.0
+2025-03-27 10:42:53,067 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'thinking fast and slow daniel kahneman' = 29.032258064516125
+2025-03-27 10:42:53,067 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 80.0)
+2025-03-27 10:42:53,068 - book_indexer - INFO - Created/updated annotation document: Thinking, Fast and Slow - Annotations.md
+2025-03-27 10:42:53,068 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:42:53,068 - book_indexer - INFO - Looking for directory matching: 'Thinking, Fast and Slow'
+2025-03-27 10:42:53,068 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:42:53,068 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:42:53,068 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,068 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,068 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,068 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,068 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,068 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,068 - book_indexer - WARNING - ✗ No matching markdown directory found for: Thinking, Fast and Slow
+2025-03-27 10:42:53,068 - book_indexer - WARNING - ✗ No markdown match for: Thinking, Fast and Slow
+2025-03-27 10:42:53,068 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-27 10:42:53,069 - book_indexer - INFO - Created/updated annotation document: The 48 Laws of Power - Annotations.md
+2025-03-27 10:42:53,069 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:42:53,069 - book_indexer - INFO - Looking for directory matching: 'The 48 Laws of Power'
+2025-03-27 10:42:53,069 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:42:53,069 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:42:53,069 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,069 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,069 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,069 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,069 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,069 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,069 - book_indexer - WARNING - ✗ No matching markdown directory found for: The 48 Laws of Power
+2025-03-27 10:42:53,069 - book_indexer - WARNING - ✗ No markdown match for: The 48 Laws of Power
+2025-03-27 10:42:53,069 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-27 10:42:53,069 - book_indexer - INFO - Created/updated annotation document: out.pdf - Annotations.md
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:42:53,070 - book_indexer - INFO - Looking for directory matching: 'out'
+2025-03-27 10:42:53,070 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:42:53,070 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:42:53,070 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,070 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,070 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,070 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,070 - book_indexer - WARNING - ✗ No matching markdown directory found for: out
+2025-03-27 10:42:53,070 - book_indexer - WARNING - ✗ No markdown match for: out.pdf
+2025-03-27 10:42:53,070 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-27 10:42:53,070 - book_indexer - INFO - Created/updated annotation document: Mastering Tai Chi - Annotations.md
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:42:53,070 - book_indexer - INFO - Looking for directory matching: 'Mastering Tai Chi'
+2025-03-27 10:42:53,070 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:42:53,070 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:42:53,070 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,070 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,070 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,070 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,070 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,070 - book_indexer - WARNING - ✗ No matching markdown directory found for: Mastering Tai Chi
+2025-03-27 10:42:53,071 - book_indexer - WARNING - ✗ No markdown match for: Mastering Tai Chi
+2025-03-27 10:42:53,071 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-27 10:42:53,071 - book_indexer - INFO - Created/updated annotation document: Harry Potter- The Prequel - Annotations.md
+2025-03-27 10:42:53,071 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:42:53,071 - book_indexer - INFO - Looking for directory matching: 'Harry Potter- The Prequel'
+2025-03-27 10:42:53,071 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:42:53,071 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:42:53,071 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,071 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,071 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:42:53,071 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,071 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:42:53,071 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:42:53,071 - book_indexer - WARNING - ✗ No matching markdown directory found for: Harry Potter- The Prequel
+2025-03-27 10:42:53,071 - book_indexer - WARNING - ✗ No markdown match for: Harry Potter- The Prequel
+2025-03-27 10:42:53,071 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-27 10:42:53,071 - book_indexer - INFO - Created index with 5 entries
+2025-03-27 10:42:53,071 - book_indexer - INFO - Processing completed
+2025-03-27 10:44:44,343 - book_indexer - INFO - Logger initialized
+2025-03-27 10:44:44,364 - book_indexer - INFO - Starting book indexer
+2025-03-27 10:44:44,364 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 10:44:44,364 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 10:44:44,364 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 10:44:44,365 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 10:44:44,365 - book_indexer - INFO - Running full book processing
+2025-03-27 10:44:44,365 - book_indexer - INFO - Starting book processing
+2025-03-27 10:44:44,365 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-27 10:44:46,167 - book_indexer - INFO - 
+=== Matching Markdowns to Books ===
+2025-03-27 10:44:46,167 - book_indexer - INFO - 
+DEBUG: Exact string comparison:
+2025-03-27 10:44:46,167 - book_indexer - INFO - 
+Book filename: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,167 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:44:46,167 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:44:46,167 - book_indexer - INFO - Simple ratio: 31.707317073170728
+2025-03-27 10:44:46,168 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:44:46,168 - book_indexer - INFO - Partial ratio: 36.111111111111114
+2025-03-27 10:44:46,168 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,168 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,168 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:44:46,168 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,168 - book_indexer - INFO - Simple ratio: 100.0
+2025-03-27 10:44:46,168 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:44:46,168 - book_indexer - INFO - Partial ratio: 100.0
+2025-03-27 10:44:46,168 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,168 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,168 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,168 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'j k rowling harry potter the prequel' = 23.529411764705888
+2025-03-27 10:44:46,168 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'thinking fast and slow daniel kahneman' = 56.60377358490566
+2025-03-27 10:44:46,168 - book_indexer - INFO - ✓ Selected best match: 'Thinking, Fast and Slow - Daniel Kahneman' (score: 56.60377358490566)
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Book filename: '48 Laws of Power, The - Robert Greene; Joost Elffers'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Simple ratio: 36.55913978494624
+2025-03-27 10:44:46,169 - book_indexer - INFO - Token sort ratio: 41.30434782608695
+2025-03-27 10:44:46,169 - book_indexer - INFO - Partial ratio: 42.10526315789473
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,169 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:44:46,169 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Simple ratio: 30.107526881720425
+2025-03-27 10:44:46,169 - book_indexer - INFO - Token sort ratio: 34.40860215053764
+2025-03-27 10:44:46,169 - book_indexer - INFO - Partial ratio: 36.36363636363637
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,169 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:44:46,169 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,169 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'j k rowling harry potter the prequel' = 34.92063492063492
+2025-03-27 10:44:46,169 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'thinking fast and slow daniel kahneman' = 33.84615384615385
+2025-03-27 10:44:46,169 - book_indexer - WARNING - ✗ No suitable match found for: 48 Laws of Power, The - Robert Greene; Joost Elffers
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Book filename: 'Gypsy Jazz Guitar Chords'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Simple ratio: 24.615384615384617
+2025-03-27 10:44:46,169 - book_indexer - INFO - Token sort ratio: 18.75
+2025-03-27 10:44:46,169 - book_indexer - INFO - Partial ratio: 33.333333333333336
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,169 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:44:46,169 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,169 - book_indexer - INFO - Simple ratio: 21.53846153846154
+2025-03-27 10:44:46,169 - book_indexer - INFO - Token sort ratio: 21.53846153846154
+2025-03-27 10:44:46,169 - book_indexer - INFO - Partial ratio: 29.166666666666664
+2025-03-27 10:44:46,169 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,169 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:44:46,169 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,169 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'j k rowling harry potter the prequel' = 26.66666666666667
+2025-03-27 10:44:46,169 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'thinking fast and slow daniel kahneman' = 25.806451612903224
+2025-03-27 10:44:46,170 - book_indexer - WARNING - ✗ No suitable match found for: Gypsy Jazz Guitar Chords
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Book filename: 'Mastering Tai Chi The Great Courses'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Simple ratio: 39.473684210526315
+2025-03-27 10:44:46,170 - book_indexer - INFO - Token sort ratio: 37.33333333333333
+2025-03-27 10:44:46,170 - book_indexer - INFO - Partial ratio: 50.98039215686274
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,170 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:44:46,170 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Simple ratio: 28.947368421052634
+2025-03-27 10:44:46,170 - book_indexer - INFO - Token sort ratio: 34.210526315789465
+2025-03-27 10:44:46,170 - book_indexer - INFO - Partial ratio: 33.84615384615385
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,170 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:44:46,170 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,170 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'j k rowling harry potter the prequel' = 45.070422535211264
+2025-03-27 10:44:46,170 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'thinking fast and slow daniel kahneman' = 35.61643835616438
+2025-03-27 10:44:46,170 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 45.070422535211264)
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Book filename: 'J. K. Rowling - Harry Potter The Prequel'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Simple ratio: 98.76543209876543
+2025-03-27 10:44:46,170 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:44:46,170 - book_indexer - INFO - Partial ratio: 97.5
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,170 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:44:46,170 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:44:46,170 - book_indexer - INFO - Simple ratio: 29.629629629629626
+2025-03-27 10:44:46,170 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:44:46,170 - book_indexer - INFO - Partial ratio: 35.820895522388064
+2025-03-27 10:44:46,170 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:44:46,170 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:44:46,170 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:44:46,170 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'j k rowling harry potter the prequel' = 80.0
+2025-03-27 10:44:46,170 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'thinking fast and slow daniel kahneman' = 29.032258064516125
+2025-03-27 10:44:46,171 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 80.0)
+2025-03-27 10:44:46,171 - book_indexer - INFO - Created/updated annotation document: Thinking, Fast and Slow - Annotations.md
+2025-03-27 10:44:46,171 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:44:46,171 - book_indexer - INFO - Looking for directory matching: 'Thinking, Fast and Slow'
+2025-03-27 10:44:46,171 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:44:46,171 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:44:46,172 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,172 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,172 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,172 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,172 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,172 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,172 - book_indexer - WARNING - ✗ No matching markdown directory found for: Thinking, Fast and Slow
+2025-03-27 10:44:46,172 - book_indexer - WARNING - ✗ No markdown match for: Thinking, Fast and Slow
+2025-03-27 10:44:46,172 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-27 10:44:46,172 - book_indexer - INFO - Created/updated annotation document: The 48 Laws of Power - Annotations.md
+2025-03-27 10:44:46,172 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:44:46,172 - book_indexer - INFO - Looking for directory matching: 'The 48 Laws of Power'
+2025-03-27 10:44:46,172 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:44:46,172 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:44:46,172 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,172 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,172 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,172 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,172 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,172 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,173 - book_indexer - WARNING - ✗ No matching markdown directory found for: The 48 Laws of Power
+2025-03-27 10:44:46,173 - book_indexer - WARNING - ✗ No markdown match for: The 48 Laws of Power
+2025-03-27 10:44:46,173 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-27 10:44:46,173 - book_indexer - INFO - Created/updated annotation document: out.pdf - Annotations.md
+2025-03-27 10:44:46,173 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:44:46,173 - book_indexer - INFO - Looking for directory matching: 'out'
+2025-03-27 10:44:46,173 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:44:46,173 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:44:46,173 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,173 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,173 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,173 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,173 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,173 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,173 - book_indexer - WARNING - ✗ No matching markdown directory found for: out
+2025-03-27 10:44:46,173 - book_indexer - WARNING - ✗ No markdown match for: out.pdf
+2025-03-27 10:44:46,174 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-27 10:44:46,174 - book_indexer - INFO - Created/updated annotation document: Mastering Tai Chi - Annotations.md
+2025-03-27 10:44:46,174 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:44:46,174 - book_indexer - INFO - Looking for directory matching: 'Mastering Tai Chi'
+2025-03-27 10:44:46,174 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:44:46,174 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:44:46,174 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,174 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,174 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,174 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,174 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,174 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,174 - book_indexer - WARNING - ✗ No matching markdown directory found for: Mastering Tai Chi
+2025-03-27 10:44:46,174 - book_indexer - WARNING - ✗ No markdown match for: Mastering Tai Chi
+2025-03-27 10:44:46,174 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-27 10:44:46,174 - book_indexer - INFO - Created/updated annotation document: Harry Potter- The Prequel - Annotations.md
+2025-03-27 10:44:46,174 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:44:46,174 - book_indexer - INFO - Looking for directory matching: 'Harry Potter- The Prequel'
+2025-03-27 10:44:46,174 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:44:46,174 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:44:46,174 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,174 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,174 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:44:46,174 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,175 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:44:46,175 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:44:46,175 - book_indexer - WARNING - ✗ No matching markdown directory found for: Harry Potter- The Prequel
+2025-03-27 10:44:46,175 - book_indexer - WARNING - ✗ No markdown match for: Harry Potter- The Prequel
+2025-03-27 10:44:46,175 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-27 10:44:46,175 - book_indexer - INFO - Created index with 5 entries
+2025-03-27 10:44:46,175 - book_indexer - INFO - Processing completed
+2025-03-27 10:50:50,949 - book_indexer - INFO - Logger initialized
+2025-03-27 10:50:50,970 - book_indexer - INFO - Starting book indexer
+2025-03-27 10:50:50,970 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 10:50:50,970 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 10:50:50,971 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 10:50:50,971 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 10:50:50,971 - book_indexer - INFO - Running full book processing
+2025-03-27 10:50:50,971 - book_indexer - INFO - Starting book processing
+2025-03-27 10:50:50,971 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-27 10:50:52,884 - book_indexer - INFO - 
+=== Matching Markdowns to Books ===
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+DEBUG: Exact string comparison:
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+Book filename: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,885 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:50:52,885 - book_indexer - INFO - Simple ratio: 31.707317073170728
+2025-03-27 10:50:52,885 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:50:52,885 - book_indexer - INFO - Partial ratio: 36.111111111111114
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,885 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,885 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,885 - book_indexer - INFO - Simple ratio: 100.0
+2025-03-27 10:50:52,885 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:50:52,885 - book_indexer - INFO - Partial ratio: 100.0
+2025-03-27 10:50:52,885 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,885 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,886 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,886 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'j k rowling harry potter the prequel' = 23.529411764705888
+2025-03-27 10:50:52,886 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'thinking fast and slow daniel kahneman' = 56.60377358490566
+2025-03-27 10:50:52,886 - book_indexer - INFO - ✓ Selected best match: 'Thinking, Fast and Slow - Daniel Kahneman' (score: 56.60377358490566)
+2025-03-27 10:50:52,886 - book_indexer - INFO - 
+Book filename: '48 Laws of Power, The - Robert Greene; Joost Elffers'
+2025-03-27 10:50:52,886 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:50:52,886 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:50:52,886 - book_indexer - INFO - Simple ratio: 36.55913978494624
+2025-03-27 10:50:52,886 - book_indexer - INFO - Token sort ratio: 41.30434782608695
+2025-03-27 10:50:52,886 - book_indexer - INFO - Partial ratio: 42.10526315789473
+2025-03-27 10:50:52,886 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Simple ratio: 30.107526881720425
+2025-03-27 10:50:52,887 - book_indexer - INFO - Token sort ratio: 34.40860215053764
+2025-03-27 10:50:52,887 - book_indexer - INFO - Partial ratio: 36.36363636363637
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'j k rowling harry potter the prequel' = 34.92063492063492
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'thinking fast and slow daniel kahneman' = 33.84615384615385
+2025-03-27 10:50:52,887 - book_indexer - WARNING - ✗ No suitable match found for: 48 Laws of Power, The - Robert Greene; Joost Elffers
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Book filename: 'Gypsy Jazz Guitar Chords'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Simple ratio: 24.615384615384617
+2025-03-27 10:50:52,887 - book_indexer - INFO - Token sort ratio: 18.75
+2025-03-27 10:50:52,887 - book_indexer - INFO - Partial ratio: 33.333333333333336
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Simple ratio: 21.53846153846154
+2025-03-27 10:50:52,887 - book_indexer - INFO - Token sort ratio: 21.53846153846154
+2025-03-27 10:50:52,887 - book_indexer - INFO - Partial ratio: 29.166666666666664
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'j k rowling harry potter the prequel' = 26.66666666666667
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'thinking fast and slow daniel kahneman' = 25.806451612903224
+2025-03-27 10:50:52,887 - book_indexer - WARNING - ✗ No suitable match found for: Gypsy Jazz Guitar Chords
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Book filename: 'Mastering Tai Chi The Great Courses'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Simple ratio: 39.473684210526315
+2025-03-27 10:50:52,887 - book_indexer - INFO - Token sort ratio: 37.33333333333333
+2025-03-27 10:50:52,887 - book_indexer - INFO - Partial ratio: 50.98039215686274
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,887 - book_indexer - INFO - Simple ratio: 28.947368421052634
+2025-03-27 10:50:52,887 - book_indexer - INFO - Token sort ratio: 34.210526315789465
+2025-03-27 10:50:52,887 - book_indexer - INFO - Partial ratio: 33.84615384615385
+2025-03-27 10:50:52,887 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,887 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 10:50:52,887 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'j k rowling harry potter the prequel' = 45.070422535211264
+2025-03-27 10:50:52,887 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'thinking fast and slow daniel kahneman' = 35.61643835616438
+2025-03-27 10:50:52,887 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 45.070422535211264)
+2025-03-27 10:50:52,888 - book_indexer - INFO - 
+Book filename: 'J. K. Rowling - Harry Potter The Prequel'
+2025-03-27 10:50:52,888 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 10:50:52,888 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 10:50:52,888 - book_indexer - INFO - Simple ratio: 98.76543209876543
+2025-03-27 10:50:52,888 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 10:50:52,888 - book_indexer - INFO - Partial ratio: 97.5
+2025-03-27 10:50:52,888 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,888 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:50:52,888 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 10:50:52,888 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 10:50:52,888 - book_indexer - INFO - Simple ratio: 29.629629629629626
+2025-03-27 10:50:52,888 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 10:50:52,888 - book_indexer - INFO - Partial ratio: 35.820895522388064
+2025-03-27 10:50:52,888 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 10:50:52,888 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 10:50:52,888 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 10:50:52,888 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'j k rowling harry potter the prequel' = 80.0
+2025-03-27 10:50:52,888 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'thinking fast and slow daniel kahneman' = 29.032258064516125
+2025-03-27 10:50:52,888 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 80.0)
+2025-03-27 10:50:52,889 - book_indexer - INFO - Created/updated annotation document: Thinking, Fast and Slow - Annotations.md
+2025-03-27 10:50:52,889 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:50:52,889 - book_indexer - INFO - Looking for directory matching: 'Thinking, Fast and Slow'
+2025-03-27 10:50:52,889 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:50:52,889 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:50:52,889 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,889 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,889 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,889 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,889 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,889 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,889 - book_indexer - WARNING - ✗ No matching markdown directory found for: Thinking, Fast and Slow
+2025-03-27 10:50:52,889 - book_indexer - WARNING - ✗ No markdown match for: Thinking, Fast and Slow
+2025-03-27 10:50:52,889 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-27 10:50:52,890 - book_indexer - INFO - Created/updated annotation document: The 48 Laws of Power - Annotations.md
+2025-03-27 10:50:52,890 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:50:52,890 - book_indexer - INFO - Looking for directory matching: 'The 48 Laws of Power'
+2025-03-27 10:50:52,890 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:50:52,890 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:50:52,890 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,890 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,890 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,890 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,890 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,890 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,890 - book_indexer - WARNING - ✗ No matching markdown directory found for: The 48 Laws of Power
+2025-03-27 10:50:52,890 - book_indexer - WARNING - ✗ No markdown match for: The 48 Laws of Power
+2025-03-27 10:50:52,890 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-27 10:50:52,891 - book_indexer - INFO - Created/updated annotation document: out.pdf - Annotations.md
+2025-03-27 10:50:52,891 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:50:52,891 - book_indexer - INFO - Looking for directory matching: 'out'
+2025-03-27 10:50:52,891 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:50:52,891 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:50:52,891 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,891 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,891 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,891 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,891 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,891 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,891 - book_indexer - WARNING - ✗ No matching markdown directory found for: out
+2025-03-27 10:50:52,891 - book_indexer - WARNING - ✗ No markdown match for: out.pdf
+2025-03-27 10:50:52,891 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-27 10:50:52,892 - book_indexer - INFO - Created/updated annotation document: Mastering Tai Chi - Annotations.md
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:50:52,892 - book_indexer - INFO - Looking for directory matching: 'Mastering Tai Chi'
+2025-03-27 10:50:52,892 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:50:52,892 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:50:52,892 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,892 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,892 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,892 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,892 - book_indexer - WARNING - ✗ No matching markdown directory found for: Mastering Tai Chi
+2025-03-27 10:50:52,892 - book_indexer - WARNING - ✗ No markdown match for: Mastering Tai Chi
+2025-03-27 10:50:52,892 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-27 10:50:52,892 - book_indexer - INFO - Created/updated annotation document: Harry Potter- The Prequel - Annotations.md
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 10:50:52,892 - book_indexer - INFO - Looking for directory matching: 'Harry Potter- The Prequel'
+2025-03-27 10:50:52,892 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 10:50:52,892 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 10:50:52,892 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,892 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 10:50:52,892 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,892 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 10:50:52,892 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 10:50:52,892 - book_indexer - WARNING - ✗ No matching markdown directory found for: Harry Potter- The Prequel
+2025-03-27 10:50:52,892 - book_indexer - WARNING - ✗ No markdown match for: Harry Potter- The Prequel
+2025-03-27 10:50:52,892 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-27 10:50:52,893 - book_indexer - INFO - Created index with 5 entries
+2025-03-27 10:50:52,893 - book_indexer - INFO - Processing completed
+2025-03-27 12:26:36,219 - book_indexer - INFO - Logger initialized
+2025-03-27 12:26:36,254 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:26:36,254 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:26:36,254 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:26:36,254 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:26:36,254 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:26:36,254 - book_indexer - INFO - Running full book processing
+2025-03-27 12:26:36,254 - book_indexer - INFO - Starting book processing
+2025-03-27 12:26:36,254 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-27 12:26:38,113 - book_indexer - INFO - 
+=== Matching Markdowns to Books ===
+2025-03-27 12:26:38,114 - book_indexer - INFO - 
+DEBUG: Exact string comparison:
+2025-03-27 12:26:38,114 - book_indexer - INFO - 
+Book filename: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,114 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:26:38,114 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:26:38,114 - book_indexer - INFO - Simple ratio: 31.707317073170728
+2025-03-27 12:26:38,114 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 12:26:38,114 - book_indexer - INFO - Partial ratio: 36.111111111111114
+2025-03-27 12:26:38,115 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,115 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,115 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:26:38,115 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,115 - book_indexer - INFO - Simple ratio: 100.0
+2025-03-27 12:26:38,115 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 12:26:38,115 - book_indexer - INFO - Partial ratio: 100.0
+2025-03-27 12:26:38,115 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,115 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,115 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,115 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'j k rowling harry potter the prequel' = 23.529411764705888
+2025-03-27 12:26:38,115 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'thinking fast and slow daniel kahneman' = 56.60377358490566
+2025-03-27 12:26:38,115 - book_indexer - INFO - ✓ Selected best match: 'Thinking, Fast and Slow - Daniel Kahneman' (score: 56.60377358490566)
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Book filename: '48 Laws of Power, The - Robert Greene; Joost Elffers'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Simple ratio: 36.55913978494624
+2025-03-27 12:26:38,116 - book_indexer - INFO - Token sort ratio: 41.30434782608695
+2025-03-27 12:26:38,116 - book_indexer - INFO - Partial ratio: 42.10526315789473
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,116 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 12:26:38,116 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Simple ratio: 30.107526881720425
+2025-03-27 12:26:38,116 - book_indexer - INFO - Token sort ratio: 34.40860215053764
+2025-03-27 12:26:38,116 - book_indexer - INFO - Partial ratio: 36.36363636363637
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,116 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 12:26:38,116 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,116 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'j k rowling harry potter the prequel' = 34.92063492063492
+2025-03-27 12:26:38,116 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'thinking fast and slow daniel kahneman' = 33.84615384615385
+2025-03-27 12:26:38,116 - book_indexer - WARNING - ✗ No suitable match found for: 48 Laws of Power, The - Robert Greene; Joost Elffers
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Book filename: 'Gypsy Jazz Guitar Chords'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Simple ratio: 24.615384615384617
+2025-03-27 12:26:38,116 - book_indexer - INFO - Token sort ratio: 18.75
+2025-03-27 12:26:38,116 - book_indexer - INFO - Partial ratio: 33.333333333333336
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,116 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 12:26:38,116 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,116 - book_indexer - INFO - Simple ratio: 21.53846153846154
+2025-03-27 12:26:38,116 - book_indexer - INFO - Token sort ratio: 21.53846153846154
+2025-03-27 12:26:38,116 - book_indexer - INFO - Partial ratio: 29.166666666666664
+2025-03-27 12:26:38,116 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,116 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 12:26:38,116 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,117 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'j k rowling harry potter the prequel' = 26.66666666666667
+2025-03-27 12:26:38,117 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'thinking fast and slow daniel kahneman' = 25.806451612903224
+2025-03-27 12:26:38,117 - book_indexer - WARNING - ✗ No suitable match found for: Gypsy Jazz Guitar Chords
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Book filename: 'Mastering Tai Chi The Great Courses'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Simple ratio: 39.473684210526315
+2025-03-27 12:26:38,117 - book_indexer - INFO - Token sort ratio: 37.33333333333333
+2025-03-27 12:26:38,117 - book_indexer - INFO - Partial ratio: 50.98039215686274
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,117 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 12:26:38,117 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Simple ratio: 28.947368421052634
+2025-03-27 12:26:38,117 - book_indexer - INFO - Token sort ratio: 34.210526315789465
+2025-03-27 12:26:38,117 - book_indexer - INFO - Partial ratio: 33.84615384615385
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,117 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 12:26:38,117 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,117 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'j k rowling harry potter the prequel' = 45.070422535211264
+2025-03-27 12:26:38,117 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'thinking fast and slow daniel kahneman' = 35.61643835616438
+2025-03-27 12:26:38,117 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 45.070422535211264)
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Book filename: 'J. K. Rowling - Harry Potter The Prequel'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Simple ratio: 98.76543209876543
+2025-03-27 12:26:38,117 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 12:26:38,117 - book_indexer - INFO - Partial ratio: 97.5
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,117 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 12:26:38,117 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:26:38,117 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:26:38,117 - book_indexer - INFO - Simple ratio: 29.629629629629626
+2025-03-27 12:26:38,117 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 12:26:38,118 - book_indexer - INFO - Partial ratio: 35.820895522388064
+2025-03-27 12:26:38,118 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:26:38,118 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 12:26:38,118 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:26:38,118 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'j k rowling harry potter the prequel' = 80.0
+2025-03-27 12:26:38,118 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'thinking fast and slow daniel kahneman' = 29.032258064516125
+2025-03-27 12:26:38,118 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 80.0)
+2025-03-27 12:26:38,118 - book_indexer - INFO - Created/updated annotation document: Thinking, Fast and Slow - Annotations.md
+2025-03-27 12:26:38,118 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:26:38,118 - book_indexer - INFO - Looking for directory matching: 'Thinking, Fast and Slow'
+2025-03-27 12:26:38,118 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:26:38,118 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:26:38,118 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,118 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,118 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,118 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,118 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,118 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,118 - book_indexer - WARNING - ✗ No matching markdown directory found for: Thinking, Fast and Slow
+2025-03-27 12:26:38,118 - book_indexer - WARNING - ✗ No markdown match for: Thinking, Fast and Slow
+2025-03-27 12:26:38,118 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-27 12:26:38,119 - book_indexer - INFO - Created/updated annotation document: The 48 Laws of Power - Annotations.md
+2025-03-27 12:26:38,119 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:26:38,119 - book_indexer - INFO - Looking for directory matching: 'The 48 Laws of Power'
+2025-03-27 12:26:38,119 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:26:38,119 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:26:38,119 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,119 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,119 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,119 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,119 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,119 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,119 - book_indexer - WARNING - ✗ No matching markdown directory found for: The 48 Laws of Power
+2025-03-27 12:26:38,119 - book_indexer - WARNING - ✗ No markdown match for: The 48 Laws of Power
+2025-03-27 12:26:38,119 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-27 12:26:38,120 - book_indexer - INFO - Created/updated annotation document: out.pdf - Annotations.md
+2025-03-27 12:26:38,120 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:26:38,120 - book_indexer - INFO - Looking for directory matching: 'out'
+2025-03-27 12:26:38,120 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:26:38,120 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:26:38,120 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,120 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,120 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,120 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,120 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,120 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,120 - book_indexer - WARNING - ✗ No matching markdown directory found for: out
+2025-03-27 12:26:38,120 - book_indexer - WARNING - ✗ No markdown match for: out.pdf
+2025-03-27 12:26:38,120 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-27 12:26:38,121 - book_indexer - INFO - Created/updated annotation document: Mastering Tai Chi - Annotations.md
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:26:38,121 - book_indexer - INFO - Looking for directory matching: 'Mastering Tai Chi'
+2025-03-27 12:26:38,121 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:26:38,121 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:26:38,121 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,121 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,121 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,121 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,121 - book_indexer - WARNING - ✗ No matching markdown directory found for: Mastering Tai Chi
+2025-03-27 12:26:38,121 - book_indexer - WARNING - ✗ No markdown match for: Mastering Tai Chi
+2025-03-27 12:26:38,121 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-27 12:26:38,121 - book_indexer - INFO - Created/updated annotation document: Harry Potter- The Prequel - Annotations.md
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:26:38,121 - book_indexer - INFO - Looking for directory matching: 'Harry Potter- The Prequel'
+2025-03-27 12:26:38,121 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:26:38,121 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:26:38,121 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,121 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:26:38,121 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,121 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:26:38,121 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:26:38,121 - book_indexer - WARNING - ✗ No matching markdown directory found for: Harry Potter- The Prequel
+2025-03-27 12:26:38,121 - book_indexer - WARNING - ✗ No markdown match for: Harry Potter- The Prequel
+2025-03-27 12:26:38,121 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-27 12:26:38,122 - book_indexer - INFO - Created index with 5 entries
+2025-03-27 12:26:38,122 - book_indexer - INFO - Processing completed
+2025-03-27 12:28:53,829 - book_indexer - INFO - Logger initialized
+2025-03-27 12:28:53,848 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:28:53,848 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:28:53,848 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:28:53,848 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:28:53,848 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:28:53,848 - book_indexer - INFO - Running full book processing
+2025-03-27 12:28:53,848 - book_indexer - INFO - Starting book processing
+2025-03-27 12:28:53,848 - book_indexer - INFO - 
+Found 5 book files to process
+2025-03-27 12:28:55,560 - book_indexer - INFO - 
+=== Matching Markdowns to Books ===
+2025-03-27 12:28:55,560 - book_indexer - INFO - 
+DEBUG: Exact string comparison:
+2025-03-27 12:28:55,560 - book_indexer - INFO - 
+Book filename: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,560 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:28:55,561 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:28:55,561 - book_indexer - INFO - Simple ratio: 31.707317073170728
+2025-03-27 12:28:55,561 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 12:28:55,561 - book_indexer - INFO - Partial ratio: 36.111111111111114
+2025-03-27 12:28:55,561 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,561 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,561 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:28:55,561 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,561 - book_indexer - INFO - Simple ratio: 100.0
+2025-03-27 12:28:55,561 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 12:28:55,561 - book_indexer - INFO - Partial ratio: 100.0
+2025-03-27 12:28:55,561 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,561 - book_indexer - INFO - Book:     T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,561 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,561 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'j k rowling harry potter the prequel' = 23.529411764705888
+2025-03-27 12:28:55,561 - book_indexer - INFO - → Comparing 'daniel kahneman' to 'thinking fast and slow daniel kahneman' = 56.60377358490566
+2025-03-27 12:28:55,561 - book_indexer - INFO - ✓ Selected best match: 'Thinking, Fast and Slow - Daniel Kahneman' (score: 56.60377358490566)
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Book filename: '48 Laws of Power, The - Robert Greene; Joost Elffers'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 36.55913978494624
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 41.30434782608695
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 42.10526315789473
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 30.107526881720425
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 34.40860215053764
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 36.36363636363637
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     4 8   L a w s   o f   P o w e r ,   T h e   -   R o b e r t   G r e e n e ;   J o o s t   E l f f e r s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,562 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'j k rowling harry potter the prequel' = 34.92063492063492
+2025-03-27 12:28:55,562 - book_indexer - INFO - → Comparing 'robert greene joost elffers' to 'thinking fast and slow daniel kahneman' = 33.84615384615385
+2025-03-27 12:28:55,562 - book_indexer - WARNING - ✗ No suitable match found for: 48 Laws of Power, The - Robert Greene; Joost Elffers
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Book filename: 'Gypsy Jazz Guitar Chords'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 24.615384615384617
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 18.75
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 33.333333333333336
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 21.53846153846154
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 21.53846153846154
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 29.166666666666664
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     G y p s y   J a z z   G u i t a r   C h o r d s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,562 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'j k rowling harry potter the prequel' = 26.66666666666667
+2025-03-27 12:28:55,562 - book_indexer - INFO - → Comparing 'gypsy jazz guitar chords' to 'thinking fast and slow daniel kahneman' = 25.806451612903224
+2025-03-27 12:28:55,562 - book_indexer - WARNING - ✗ No suitable match found for: Gypsy Jazz Guitar Chords
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Book filename: 'Mastering Tai Chi The Great Courses'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 39.473684210526315
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 37.33333333333333
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 50.98039215686274
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,562 - book_indexer - INFO - Simple ratio: 28.947368421052634
+2025-03-27 12:28:55,562 - book_indexer - INFO - Token sort ratio: 34.210526315789465
+2025-03-27 12:28:55,562 - book_indexer - INFO - Partial ratio: 33.84615384615385
+2025-03-27 12:28:55,562 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,562 - book_indexer - INFO - Book:     M a s t e r i n g   T a i   C h i   T h e   G r e a t   C o u r s e s
+2025-03-27 12:28:55,562 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,562 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'j k rowling harry potter the prequel' = 45.070422535211264
+2025-03-27 12:28:55,563 - book_indexer - INFO - → Comparing 'mastering tai chi the great courses' to 'thinking fast and slow daniel kahneman' = 35.61643835616438
+2025-03-27 12:28:55,563 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 45.070422535211264)
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+Book filename: 'J. K. Rowling - Harry Potter The Prequel'
+2025-03-27 12:28:55,563 - book_indexer - INFO - Comparing against markdown directories:
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+Markdown dir: 'J. K. Rowling - Harry Potter  The Prequel'
+2025-03-27 12:28:55,563 - book_indexer - INFO - Simple ratio: 98.76543209876543
+2025-03-27 12:28:55,563 - book_indexer - INFO - Token sort ratio: 100.0
+2025-03-27 12:28:55,563 - book_indexer - INFO - Partial ratio: 97.5
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,563 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 12:28:55,563 - book_indexer - INFO - Markdown: J .   K .   R o w l i n g   -   H a r r y   P o t t e r     T h e   P r e q u e l
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+Markdown dir: 'Thinking, Fast and Slow - Daniel Kahneman'
+2025-03-27 12:28:55,563 - book_indexer - INFO - Simple ratio: 29.629629629629626
+2025-03-27 12:28:55,563 - book_indexer - INFO - Token sort ratio: 37.03703703703704
+2025-03-27 12:28:55,563 - book_indexer - INFO - Partial ratio: 35.820895522388064
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+Character comparison:
+2025-03-27 12:28:55,563 - book_indexer - INFO - Book:     J .   K .   R o w l i n g   -   H a r r y   P o t t e r   T h e   P r e q u e l
+2025-03-27 12:28:55,563 - book_indexer - INFO - Markdown: T h i n k i n g ,   F a s t   a n d   S l o w   -   D a n i e l   K a h n e m a n
+2025-03-27 12:28:55,563 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'j k rowling harry potter the prequel' = 80.0
+2025-03-27 12:28:55,563 - book_indexer - INFO - → Comparing 'harry potter the prequel' to 'thinking fast and slow daniel kahneman' = 29.032258064516125
+2025-03-27 12:28:55,563 - book_indexer - INFO - ✓ Selected best match: 'J. K. Rowling - Harry Potter  The Prequel' (score: 80.0)
+2025-03-27 12:28:55,563 - book_indexer - INFO - Created/updated annotation document: Thinking, Fast and Slow - Annotations.md
+2025-03-27 12:28:55,563 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:28:55,563 - book_indexer - INFO - Looking for directory matching: 'Thinking, Fast and Slow'
+2025-03-27 12:28:55,563 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:28:55,563 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:28:55,563 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,564 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,564 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,564 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,564 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,564 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,564 - book_indexer - WARNING - ✗ No matching markdown directory found for: Thinking, Fast and Slow
+2025-03-27 12:28:55,564 - book_indexer - WARNING - ✗ No markdown match for: Thinking, Fast and Slow
+2025-03-27 12:28:55,564 - book_indexer - INFO - Created/updated landing page: Thinking, Fast and Slow.md
+2025-03-27 12:28:55,564 - book_indexer - INFO - Created/updated annotation document: The 48 Laws of Power - Annotations.md
+2025-03-27 12:28:55,564 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:28:55,564 - book_indexer - INFO - Looking for directory matching: 'The 48 Laws of Power'
+2025-03-27 12:28:55,564 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:28:55,564 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:28:55,564 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,564 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,564 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,564 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,564 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,564 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,564 - book_indexer - WARNING - ✗ No matching markdown directory found for: The 48 Laws of Power
+2025-03-27 12:28:55,564 - book_indexer - WARNING - ✗ No markdown match for: The 48 Laws of Power
+2025-03-27 12:28:55,564 - book_indexer - INFO - Created/updated landing page: The 48 Laws of Power.md
+2025-03-27 12:28:55,565 - book_indexer - INFO - Created/updated annotation document: out.pdf - Annotations.md
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:28:55,565 - book_indexer - INFO - Looking for directory matching: 'out'
+2025-03-27 12:28:55,565 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:28:55,565 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:28:55,565 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,565 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,565 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,565 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,565 - book_indexer - WARNING - ✗ No matching markdown directory found for: out
+2025-03-27 12:28:55,565 - book_indexer - WARNING - ✗ No markdown match for: out.pdf
+2025-03-27 12:28:55,565 - book_indexer - INFO - Created/updated landing page: out.pdf.md
+2025-03-27 12:28:55,565 - book_indexer - INFO - Created/updated annotation document: Mastering Tai Chi - Annotations.md
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:28:55,565 - book_indexer - INFO - Looking for directory matching: 'Mastering Tai Chi'
+2025-03-27 12:28:55,565 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:28:55,565 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:28:55,565 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,565 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,565 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,565 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,565 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,565 - book_indexer - WARNING - ✗ No matching markdown directory found for: Mastering Tai Chi
+2025-03-27 12:28:55,565 - book_indexer - WARNING - ✗ No markdown match for: Mastering Tai Chi
+2025-03-27 12:28:55,566 - book_indexer - INFO - Created/updated landing page: Mastering Tai Chi.md
+2025-03-27 12:28:55,566 - book_indexer - INFO - Created/updated annotation document: Harry Potter- The Prequel - Annotations.md
+2025-03-27 12:28:55,566 - book_indexer - INFO - 
+=== Markdown Directory Search ===
+2025-03-27 12:28:55,566 - book_indexer - INFO - Looking for directory matching: 'Harry Potter- The Prequel'
+2025-03-27 12:28:55,566 - book_indexer - INFO - Searching in: /Users/austinavent/Documents/VAULTTEST/TESTING/Books/Markdowns
+2025-03-27 12:28:55,566 - book_indexer - INFO - Found 2 markdown directories:
+2025-03-27 12:28:55,566 - book_indexer - INFO -   - J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,566 - book_indexer - INFO -   - Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,566 - book_indexer - INFO - 
+Checking directory: J. K. Rowling - Harry Potter  The Prequel
+2025-03-27 12:28:55,566 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,566 - book_indexer - INFO - 
+Checking directory: Thinking, Fast and Slow - Daniel Kahneman
+2025-03-27 12:28:55,566 - book_indexer - DEBUG -   ✗ No markdown files found in directory
+2025-03-27 12:28:55,566 - book_indexer - WARNING - ✗ No matching markdown directory found for: Harry Potter- The Prequel
+2025-03-27 12:28:55,566 - book_indexer - WARNING - ✗ No markdown match for: Harry Potter- The Prequel
+2025-03-27 12:28:55,566 - book_indexer - INFO - Created/updated landing page: Harry Potter- The Prequel.md
+2025-03-27 12:28:55,567 - book_indexer - INFO - Created index with 5 entries
+2025-03-27 12:28:55,567 - book_indexer - INFO - Processing completed
+2025-03-27 12:36:56,971 - book_indexer - INFO - Logger initialized
+2025-03-27 12:37:12,200 - book_indexer - INFO - Logger initialized
+2025-03-27 12:37:12,224 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:37:12,224 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:37:12,224 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:37:12,224 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:37:12,224 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:37:12,225 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:37:12,225 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:37:12,228 - book_indexer - INFO - Processing completed
+2025-03-27 12:41:00,491 - book_indexer - INFO - Logger initialized
+2025-03-27 12:41:00,514 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:41:00,514 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:41:00,514 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:41:00,514 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:41:00,514 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:41:00,514 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:41:00,514 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:41:00,518 - book_indexer - INFO - Processing completed
+2025-03-27 12:44:42,913 - book_indexer - INFO - Logger initialized
+2025-03-27 12:44:42,926 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:44:42,926 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:44:42,926 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:44:42,926 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:44:42,926 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:44:42,926 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:44:42,926 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:44:42,928 - book_indexer - INFO - Processing completed
+2025-03-27 12:44:53,385 - book_indexer - INFO - Logger initialized
+2025-03-27 12:44:53,396 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:44:53,396 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:44:53,396 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:44:53,396 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:44:53,396 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:44:53,396 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:44:53,396 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:44:53,398 - book_indexer - INFO - Processing completed
+2025-03-27 12:44:56,809 - book_indexer - INFO - Logger initialized
+2025-03-27 12:44:56,819 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:44:56,819 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:44:56,819 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:44:56,819 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:44:56,819 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:44:56,819 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:44:56,819 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:44:56,820 - book_indexer - INFO - Processing completed
+2025-03-27 12:45:13,235 - book_indexer - INFO - Logger initialized
+2025-03-27 12:45:13,247 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:45:13,247 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:45:13,247 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:45:13,247 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:45:13,247 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:45:13,247 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:45:13,247 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:45:13,248 - book_indexer - INFO - Processing completed
+2025-03-27 12:45:23,439 - book_indexer - INFO - Logger initialized
+2025-03-27 12:45:23,452 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:45:23,452 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:45:23,452 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:45:23,452 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:45:23,452 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:45:23,452 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:45:23,452 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:45:23,453 - book_indexer - INFO - Processing completed
+2025-03-27 12:46:41,762 - book_indexer - INFO - Logger initialized
+2025-03-27 12:46:41,787 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:46:41,787 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:46:41,787 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:46:41,787 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:46:41,787 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:46:41,788 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:46:41,788 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:46:41,790 - book_indexer - INFO - Processing completed
+2025-03-27 12:46:44,669 - book_indexer - INFO - Logger initialized
+2025-03-27 12:46:44,678 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:46:44,678 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:46:44,678 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:46:44,678 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:46:44,678 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:46:44,678 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:46:44,678 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:46:44,679 - book_indexer - INFO - Processing completed
+2025-03-27 12:50:08,352 - book_indexer - INFO - Logger initialized
+2025-03-27 12:50:08,378 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:50:08,378 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:50:08,378 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:50:08,378 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:50:08,378 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:50:08,378 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:50:08,378 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:50:08,381 - book_indexer - INFO - Processing completed
+2025-03-27 12:50:11,420 - book_indexer - INFO - Logger initialized
+2025-03-27 12:50:11,432 - book_indexer - INFO - Starting book indexer
+2025-03-27 12:50:11,432 - book_indexer - DEBUG - VAULT_DIR exists: True
+2025-03-27 12:50:11,432 - book_indexer - DEBUG - BOOKS_DIR exists: True
+2025-03-27 12:50:11,432 - book_indexer - DEBUG - ORIGINALS_DIR exists: True
+2025-03-27 12:50:11,432 - book_indexer - DEBUG - MARKDOWN_DIR exists: True
+2025-03-27 12:50:11,432 - book_indexer - DEBUG - Files in ORIGINALS_DIR: [PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Thinking, Fast and Slow - Daniel Kahneman.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/48 Laws of Power, The - Robert Greene; Joost Elffers.epub'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Gypsy Jazz Guitar Chords.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/Mastering Tai Chi The Great Courses.pdf'), PosixPath('/Users/austinavent/Documents/VAULTTEST/TESTING/Books/Originals/J. K. Rowling - Harry Potter The Prequel.pdf')]
+2025-03-27 12:50:11,432 - book_indexer - INFO - Running in match-only mode
+2025-03-27 12:50:11,433 - book_indexer - INFO - Processing completed
