@@ -151,7 +151,7 @@ class IndexProcessor:
         for md_file in markdown_files:
             md_dir_name = os.path.basename(os.path.dirname(md_file))
             md_name = os.path.splitext(os.path.basename(md_file))[0]
-            print(f"\nMatching for markdown dir: '{md_dir_name}'")
+            print(f"\nMatching for markdown file: '{md_dir_name}/{md_name}.md'")
             
             # Build a list of original file stems for fuzzy matching
             original_stems = [os.path.splitext(os.path.basename(orig))[0] for orig in original_files]
@@ -183,12 +183,23 @@ class IndexProcessor:
                     try:
                         content = landing_page.read_text()
                         
-                        # Create the markdown link
-                        rel_path = Path(os.path.dirname(md_file)).relative_to(self.config.VAULT_DIR)
-                        markdown_link = f"- [[{rel_path}/index|Markdown Version]]"
+                        # Create the markdown link - link directly to the specific markdown file
+                        md_rel_path = Path(md_file).relative_to(self.config.VAULT_DIR)
+                        markdown_link = f"- [[{md_rel_path}|Markdown Version]]"
                         print(f"Adding link: {markdown_link}")
                         
-                        if markdown_link not in content:
+                        # Check if any markdown link already exists
+                        index_link_pattern = re.compile(r'\[\[.*?/index\|Markdown Version\]\]')
+                        has_index_link = index_link_pattern.search(content) is not None
+                        
+                        directory_link_pattern = re.compile(r'\[\[.*?\|Markdown Directory\]\]')
+                        has_directory_link = directory_link_pattern.search(content) is not None
+                        
+                        any_markdown_link_pattern = re.compile(r'\[\[.*?\|Markdown.*?\]\]')
+                        has_any_markdown_link = any_markdown_link_pattern.search(content) is not None
+                        
+                        if not has_any_markdown_link:
+                            # No markdown link exists, add new one
                             # Find "Document Versions" section
                             doc_versions_match = re.search(r'## Document Versions(.*?)(?=\n## |$)', content, re.DOTALL)
                             
@@ -204,11 +215,23 @@ class IndexProcessor:
                                 
                                 landing_page.write_text(updated_content)
                                 updated_count += 1
-                                print(f"Updated {landing_page.name} with link to {md_dir_name}")
+                                print(f"Updated {landing_page.name} with link to {md_file}")
                             else:
                                 print(f"No 'Document Versions' section found in {landing_page.name}")
+                        elif has_index_link or has_directory_link:
+                            # Replace old style links with direct file link
+                            if has_index_link:
+                                updated_content = index_link_pattern.sub(markdown_link, content)
+                                print(f"Replacing index link with direct file link")
+                            else:
+                                updated_content = directory_link_pattern.sub(markdown_link, content)
+                                print(f"Replacing directory link with direct file link")
+                                
+                            landing_page.write_text(updated_content)
+                            updated_count += 1
+                            print(f"Updated {landing_page.name} by replacing old link with direct file link")
                         else:
-                            print(f"Link already exists in {landing_page.name}")
+                            print(f"Markdown link already exists in {landing_page.name}")
                     except Exception as e:
                         print(f"Error updating landing page: {e}")
                 else:

@@ -78,8 +78,11 @@ class MarkdownProcessor:
         markdown_result = self.find_matching_markdown(metadata['title'])
         if markdown_result:
             md_dir, md_file = markdown_result
+            # Store the directory path
             metadata['markdown_path'] = str(md_dir.relative_to(self.config.VAULT_DIR))
-            logger.info(f"✓ Matched markdown: {md_dir.name}")
+            # Store the full path to the specific markdown file
+            metadata['markdown_file'] = str(md_file.relative_to(self.config.VAULT_DIR))
+            logger.info(f"✓ Matched markdown: {md_dir.name} -> {md_file.name}")
         else:
             logger.warning(f"✗ No markdown match for: {safe_title}")
         
@@ -96,7 +99,7 @@ class MarkdownProcessor:
         
         # Add metadata fields
         for key, value in metadata.items():
-            if key not in ['tags', 'annotation_path'] and value:
+            if key not in ['tags', 'annotation_path', 'markdown_file'] and value:
                 yaml_lines.append(f"{key}: \"{value}\"")
         
         yaml_lines.append("tags:")
@@ -118,9 +121,16 @@ class MarkdownProcessor:
         if 'annotation_path' in metadata:
             content_lines.append(f"- [[{metadata['annotation_path']}|Read & Annotate]]")
         
-        # Add markdown version if found
-        if 'markdown_path' in metadata:
-            content_lines.append(f"- [[{metadata['markdown_path']}/index|Markdown Version]]")
+        # Add markdown version if found - link directly to the markdown file
+        if 'markdown_file' in metadata:
+            content_lines.append(f"- [[{metadata['markdown_file']}|Markdown Version]]")
+        elif 'markdown_path' in metadata:
+            # If we have the path but not the specific file, try to construct a typical filename
+            dir_name = Path(metadata['markdown_path']).name
+            # Construct likely filename based on directory name
+            likely_filename = f"{dir_name}.md"
+            likely_path = f"{metadata['markdown_path']}/{likely_filename}"
+            content_lines.append(f"- [[{likely_path}|Markdown Version]]")
         
         # Add reading status section
         content_lines.extend([
